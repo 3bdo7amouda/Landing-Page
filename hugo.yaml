@@ -1,7 +1,6 @@
 baseURL: "https://3bdo7amouda.github.io/Landing-Page/"
 languageCode: "en-us"
 title: "Abdelrahman Hamouda | DevOps Engineer"
-theme: .
 
 outputs:
   home:
