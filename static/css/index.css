@@ -210,24 +210,41 @@ header .navbar.animate {
     box-shadow: 0 0 11px rgb(15 80 100 / 20%);
 }
 
-#about ul {
+/* Force single column for ALL lists in about section */
+#about ul,
+#about .content ul,
+#about .skills-list {
     display: block !important;
     grid-template-columns: none !important;
-    gap: 0px;
-    padding: 0px 0px 0px 2rem;
-    margin: 20px 0px 0px;
-    overflow: hidden;
+    -webkit-columns: 1 !important;
+    -moz-columns: 1 !important;
+    columns: 1 !important;
+    column-count: 1 !important;
+    gap: 0px !important;
+    padding: 0px 0px 0px 2rem !important;
+    margin: 20px 0px 0px !important;
+    overflow: visible !important;
     list-style: disc !important;
     list-style-position: outside !important;
+    width: 100% !important;
 }
 
-#about ul li {
-    position: relative;
-    margin-bottom: 10px;
-    padding-left: 0;
+#about ul li,
+#about .content ul li,
+#about .skills-list li {
+    position: relative !important;
+    margin-bottom: 10px !important;
+    padding-left: 0 !important;
+    display: list-item !important;
+    width: 100% !important;
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+    -webkit-column-break-inside: avoid !important;
 }
 
-#about ul li::before {
+#about ul li::before,
+#about .content ul li::before,
+#about .skills-list li::before {
     content: none !important;
 }
 
