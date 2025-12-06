@@ -33,6 +33,7 @@ params:
   title: "Abdelrahman Hamouda"
   description: "DevOps Engineer specializing in Cloud Infrastructure, Kubernetes, CI/CD, and Automation"
   favicon: "/fav.png"
+  staticPath: ""  # The path to serve the static files from
 
   useBootstrapCDN: false
   animate: true
