@@ -302,6 +302,38 @@ body.dark .skill-badge:hover {
     }
 }
 
+/* Skills Section Styling - CV Format */
+.skills-title {
+    color: var(--primary-color);
+    font-weight: 600;
+    opacity: 0.9;
+    margin-bottom: 1rem !important;
+}
+
+.skills-list {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    margin-bottom: 1.5rem;
+    line-height: 2;
+}
+
+.skills-list li {
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+.skills-list li p {
+    display: inline;
+    margin: 0;
+}
+
+/* Dark mode adjustments */
+body.dark .skills-list li {
+    color: var(--text-color-dark);
+}
+
 #about .content h5 {
     color: var(--primary-color);
     font-weight: 600;
