@@ -250,3 +250,60 @@
     transition: .5s;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
+
+/* Skills Section Styling */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.skill-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--primary-color) 0%, #1e40af 100%);
+    color: white;
+    padding: 0.6rem 1.2rem;
+    border-radius: 0.5rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+    box-shadow: 0 2px 8px rgba(37, 99, 235, 0.2);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.skill-badge:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4);
+    background: linear-gradient(135deg, #1e40af 0%, var(--primary-color) 100%);
+}
+
+/* Dark mode adjustments */
+body.dark .skill-badge {
+    background: linear-gradient(135deg, var(--primary-color-dark) 0%, #2563eb 100%);
+    box-shadow: 0 2px 8px rgba(59, 130, 246, 0.3);
+}
+
+body.dark .skill-badge:hover {
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.5);
+    background: linear-gradient(135deg, #2563eb 0%, var(--primary-color-dark) 100%);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .skills-container {
+        gap: 0.5rem;
+    }
+    
+    .skill-badge {
+        padding: 0.5rem 1rem;
+        font-size: 0.875rem;
+    }
+}
+
+#about .content h5 {
+    color: var(--primary-color);
+    font-weight: 600;
+    opacity: 0.9;
+}

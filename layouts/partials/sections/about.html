@@ -7,12 +7,12 @@
                 {{ .Site.Params.about.content | markdownify }}
 
                 {{ if .Site.Params.about.skills.enable }}
-                {{ .Site.Params.about.skills.title }}
-                <ul>
+                <h5 class="mt-4 mb-3">{{ .Site.Params.about.skills.title }}</h5>
+                <div class="skills-container">
                     {{ range .Site.Params.about.skills.items }}
-                    <li>{{ . | markdownify }}</li>
+                    <span class="skill-badge">{{ . | markdownify }}</span>
                     {{ end }}
-                </ul>
+                </div>
                 {{ end }}
             </div>
         </div>
