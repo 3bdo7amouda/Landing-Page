@@ -41,7 +41,7 @@ params:
   animate: true
 
   theme:
-    defaultTheme: "dark"  # Dark theme as default
+    defaultTheme: "dark"
 
   font:
     fontSize: 1rem
@@ -90,7 +90,7 @@ params:
     intro: "Hi, I'm"
     title: "Abdelrahman Hamouda"
     subtitle: "DevOps Engineer"
-    content: "DevOps Engineer with practical experience building cloud-native systems, automating deployments, and managing modern infrastructure across cloud platforms and Linux environments. Skilled in CI/CD pipelines, containerization, and Infrastructure as Code."
+    content: "DevOps Engineer with practical experience building cloud-native systems, automating deployments, and managing modern infrastructure across cloud platforms and Linux environments. Skilled in CI/CD pipelines, containerization, and Infrastructure as Code. Strong ability to improve delivery processes, enhance system reliability, and apply DevSecOps and monitoring best practices."
     image: /images/profile.jpg
     bottomImage:
       enable: true
@@ -118,7 +118,7 @@ params:
     content: |-
       DevOps Engineer with practical experience building cloud-native systems, automating deployments, and managing modern infrastructure across cloud platforms and Linux environments. 
       
-      Strong ability to improve delivery processes, enhance system reliability, and apply DevSecOps and monitoring best practices across real-world projects and training environments.
+      Skilled in CI/CD pipelines, containerization, and Infrastructure as Code. Strong ability to improve delivery processes, enhance system reliability, and apply DevSecOps and monitoring best practices across real-world projects and training environments.
     skills:
       enable: true
       title: "Key Skills:"
@@ -126,8 +126,9 @@ params:
         - "AWS & Azure Cloud"
         - "Docker & Kubernetes"
         - "Terraform & Ansible"
-        - "Jenkins & ArgoCD"
+        - "Jenkins & CI/CD"
         - "Linux (RHEL, Ubuntu)"
+        - "Windows Server"
         - "Prometheus & Grafana"
         - "Python, Bash & Java"
         - "Git & Maven"
@@ -144,7 +145,7 @@ params:
             content: |
               Managing Microsoft 365, Azure services, and hybrid infrastructure for distributed teams.
 
-              - Managed Microsoft 365, Azure services, and hybrid infrastructure to ensure reliable operations
+              - Managed Microsoft 365, Azure services, and hybrid infrastructure to ensure reliable operations for distributed teams
               - Enhanced identity and access security by implementing Entra ID policies aligned with compliance standards
               - Improved team collaboration by refining SharePoint, Teams, and Exchange Online configurations
               - Supported exploration of AI-driven monitoring concepts to enhance system performance and reliability
@@ -157,7 +158,7 @@ params:
             content: |
               Applied cloud engineering practices across AWS, Docker, Kubernetes, Terraform, Jenkins, Ansible, and DevSecOps tooling.
 
-              - Applied cloud engineering practices across AWS, Docker, Kubernetes, Terraform, and Jenkins
+              - Applied cloud engineering practices across AWS, Docker, Kubernetes, Terraform, Jenkins, Ansible, and DevSecOps tooling
               - Built and tested CI/CD pipelines and automated infrastructure modules in hands-on lab environments
               - Contributed to containerization and secure deployment workflows as part of real-world training projects
 
@@ -169,7 +170,7 @@ params:
             content: |
               Developed CI/CD pipelines using Jenkins, Docker, and Kubernetes, improving delivery speed and consistency.
 
-              - Developed CI/CD pipelines using Jenkins, Docker, and Kubernetes
+              - Developed CI/CD pipelines using Jenkins, Docker, and Kubernetes, improving delivery speed and consistency
               - Automated cloud infrastructure provisioning with Terraform and Ansible for repeatable deployments
               - Deployed monitoring stacks with Prometheus and Grafana to enhance visibility and issue detection
 
@@ -178,37 +179,37 @@ params:
     enable: true
     index: false
     items:
-      - title: "Bachelor of Communication and Electronics Engineering"
+      - title: "Bachelor of Communication and Electrical Engineering"
         school:
-          name: "Higher Institute of Engineering and Technology"
+          name: "Higher Institute of Engineering and Technology, Egypt"
           url: "#"
         date: "2021 - 2025"
         GPA: "Good"
         content: |-
           Graduated June 2025
           
-          Focus on communication systems, electronics, and embedded systems with strong foundation in engineering principles and problem-solving.
+          Focus on communication systems, electrical engineering, and embedded systems with strong foundation in engineering principles and problem-solving.
 
   # Achievements Section
   achievements:
     enable: true
     items:
       - title: AWS Certified Solutions Architect Associate
-        content: Certified in designing distributed systems and cloud architecture on AWS platform.
-        url: https://aws.amazon.com/certification/
+        content: Certified in designing distributed systems and cloud architecture on AWS platform (October 2025).
+        url: https://aws.amazon.com/certification/certified-solutions-architect-associate/
       - title: AWS Certified Cloud Practitioner
-        content: Foundation-level certification demonstrating cloud concepts and AWS services knowledge.
-        url: https://aws.amazon.com/certification/
+        content: Foundation-level certification demonstrating cloud concepts and AWS services knowledge (May 2025).
+        url: https://aws.amazon.com/certification/certified-cloud-practitioner/
       - title: Oracle Cloud Infrastructure Certified Foundation Associate
-        content: Certified in Oracle Cloud Infrastructure fundamentals and core services.
-        url: https://education.oracle.com/
+        content: Certified in Oracle Cloud Infrastructure fundamentals and core services (February 2025).
+        url: https://education.oracle.com/oracle-cloud-infrastructure-2024-certified-foundations-associate/pexam_1Z0-1085-24
 
   # Projects Section
   projects:
     enable: true
     items:
-      - title: HiveBox - End-to-End DevOps Implementation
-        content: Comprehensive DevOps solution with Kubernetes microservices, CI/CD automation using GitHub Actions, ArgoCD, and Terraform Cloud. Includes Nginx Ingress, Valkey, Grafana monitoring, and Let's Encrypt security.
+      - title: HiveBox - End-to-End DevOps Implementation Project
+        content: Designed and deployed a Kubernetes microservices environment using Nginx Ingress and Valkey. Implemented CI/CD automation with GitHub Actions, ArgoCD, and Terraform Cloud. Added observability and security controls with Grafana, Cert-Manager, and Let's Encrypt.
         image: /images/hivebox-devops-end-to-end-project.png
         featured:
           name: View Project
@@ -217,33 +218,36 @@ params:
           - "Kubernetes"
           - "ArgoCD"
           - "GitHub Actions"
-          - "Terraform"
+          - "Terraform Cloud"
           - "Grafana"
+          - "Nginx Ingress"
         links:
           - icon: fab fa-github
             url: https://github.com/3bdo7amouda
 
       - title: Ultimate CI/CD DevOps Implementation Blueprint
-        content: Full CI/CD workflow for Spring Boot application using Terraform, Jenkins, ArgoCD, and Kubernetes. Applied GitOps principles and incorporated DevSecOps checks for secure build and release processes.
+        content: Built a full CI/CD workflow for a Spring Boot application using Terraform, Jenkins, ArgoCD, and Kubernetes. Applied GitOps principles to deliver automated, version-controlled deployments. Incorporated DevSecOps checks into the pipeline for secure build and release processes.
         image: /images/1_ljUexmRouhKF9s1wzLYrzg.png
         badges:
           - "Jenkins"
           - "Terraform"
           - "ArgoCD"
           - "Kubernetes"
+          - "GitOps"
           - "DevSecOps"
         links:
           - icon: fab fa-github
             url: https://github.com/3bdo7amouda
 
       - title: Kubernetes-Based Web Deployment
-        content: Deployed containerized web application using Kubernetes and Nginx Ingress. Automated build and deployment steps using Bash scripting and YAML definitions.
+        content: Deployed a containerized web application using Kubernetes and Nginx Ingress. Automated build and deployment steps using Bash scripting and YAML definitions.
         image: /images/architecture.png
         badges:
           - "Kubernetes"
-          - "Nginx"
+          - "Nginx Ingress"
           - "Bash"
           - "Docker"
+          - "YAML"
         links:
           - icon: fab fa-github
             url: https://github.com/3bdo7amouda
@@ -253,7 +257,9 @@ params:
         image: /images/cluster k8s.png
         badges:
           - "Kubernetes"
+          - "Kubeadm"
           - "Vagrant"
+          - "VirtualBox"
           - "Prometheus"
           - "Grafana"
         links:
