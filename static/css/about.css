@@ -315,13 +315,16 @@ body.dark .skill-badge:hover {
     padding-left: 1.5rem;
     margin-bottom: 1.5rem;
     line-height: 2;
+    display: block;
 }
 
 .skills-list li {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.75rem;
     color: var(--text-color);
     font-size: 1rem;
     opacity: 0.9;
+    display: list-item;
+    width: 100%;
 }
 
 .skills-list li p {
