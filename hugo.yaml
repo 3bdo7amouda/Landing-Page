@@ -1,6 +1,8 @@
-baseURL: "https://3bdo7amouda.github.io/Landing-Page/"
+baseURL: "/"
 languageCode: "en-us"
 title: "Abdelrahman Hamouda | DevOps Engineer"
+relativeURLs: true
+canonifyURLs: false
 
 outputs:
   home:
