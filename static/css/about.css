@@ -317,10 +317,10 @@ body.dark .skill-badge:hover {
     margin-bottom: 1.5rem;
     line-height: 2.2 !important;
     display: block !important;
-    columns: 1 !important;
-    column-count: 1 !important;
-    -webkit-columns: 1 !important;
-    -moz-columns: 1 !important;
+    columns: unset !important;
+    column-count: unset !important;
+    -webkit-columns: unset !important;
+    -moz-columns: unset !important;
 }
 
 .skills-list li {
@@ -345,6 +345,54 @@ body.dark .skill-badge:hover {
 
 /* Dark mode adjustments */
 body.dark .skills-list li {
+    color: var(--text-color-dark);
+}
+
+/* Skills Section Styling - CV Format */
+#about .skills-title {
+    color: var(--primary-color);
+    font-weight: 600;
+    opacity: 0.9;
+    margin-bottom: 1rem !important;
+}
+
+#about .skills-list {
+    list-style-type: disc !important;
+    list-style-position: outside !important;
+    padding-left: 2rem !important;
+    margin-bottom: 1.5rem;
+    line-height: 2.2 !important;
+    display: block !important;
+    columns: unset !important;
+    column-count: unset !important;
+    -webkit-columns: unset !important;
+    -moz-columns: unset !important;
+    width: 100% !important;
+}
+
+#about .skills-list li {
+    margin-bottom: 0.75rem;
+    color: var(--text-color);
+    font-size: 1rem;
+    opacity: 0.9;
+    display: list-item !important;
+    width: 100% !important;
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+    -webkit-column-break-inside: avoid !important;
+}
+
+#about .skills-list li::before {
+    content: none !important;
+}
+
+#about .skills-list li p {
+    display: inline;
+    margin: 0;
+}
+
+/* Dark mode adjustments */
+body.dark #about .skills-list li {
     color: var(--text-color-dark);
 }
 
