@@ -33,15 +33,15 @@ Menus:
 
 params:
   title: "Abdelrahman Hamouda"
-  description: "DevOps Engineer specializing in Cloud Infrastructure, Kubernetes, CI/CD, and Automation"
+  description: "DevOps Engineer with practical experience building cloud-native systems, automating deployments, and managing modern infrastructure"
   favicon: "/fav.png"
-  staticPath: ""  # The path to serve the static files from
+  staticPath: ""
 
   useBootstrapCDN: false
   animate: true
 
   theme:
-    defaultTheme: "light"
+    defaultTheme: "dark"  # Dark theme as default
 
   font:
     fontSize: 1rem
@@ -90,7 +90,7 @@ params:
     intro: "Hi, I'm"
     title: "Abdelrahman Hamouda"
     subtitle: "DevOps Engineer"
-    content: "Passionate about automating infrastructure, building scalable cloud solutions, and implementing robust CI/CD pipelines. Experienced with Kubernetes, Docker, AWS, Azure, Terraform, and modern DevOps practices."
+    content: "DevOps Engineer with practical experience building cloud-native systems, automating deployments, and managing modern infrastructure across cloud platforms and Linux environments. Skilled in CI/CD pipelines, containerization, and Infrastructure as Code."
     image: /images/profile.jpg
     bottomImage:
       enable: true
@@ -106,9 +106,9 @@ params:
         - icon: fab fa-github
           url: https://github.com/3bdo7amouda
         - icon: fab fa-linkedin
-          url: https://linkedin.com/in/abdelrahman-hamouda
-        - icon: fab fa-docker
-          url: https://hub.docker.com/u/3bdo7amouda
+          url: https://linkedin.com/in/3bdo7amouda
+        - icon: fas fa-envelope
+          url: mailto:abdelrahman.hamouda29@gmail.com
 
   # About Section
   about:
@@ -116,142 +116,146 @@ params:
     title: "About Me"
     image: "/images/profile.jpg"
     content: |-
-      I am a DevOps Engineer with a passion for cloud infrastructure and automation. I specialize in designing, implementing, and maintaining scalable and reliable systems using modern DevOps tools and practices.
-
-      With expertise in container orchestration, infrastructure as code, and continuous integration/deployment, I help organizations streamline their software delivery processes and improve system reliability.
+      DevOps Engineer with practical experience building cloud-native systems, automating deployments, and managing modern infrastructure across cloud platforms and Linux environments. 
+      
+      Strong ability to improve delivery processes, enhance system reliability, and apply DevSecOps and monitoring best practices across real-world projects and training environments.
     skills:
       enable: true
-      title: "Technologies & Tools I work with:"
+      title: "Key Skills:"
       items:
-        - "Kubernetes & Docker"
-        - "AWS & Azure"
+        - "AWS & Azure Cloud"
+        - "Docker & Kubernetes"
         - "Terraform & Ansible"
-        - "Jenkins & GitLab CI/CD"
-        - "Python & Bash"
+        - "Jenkins & ArgoCD"
+        - "Linux (RHEL, Ubuntu)"
         - "Prometheus & Grafana"
-        - "Linux Administration"
-        - "ArgoCD & Helm"
+        - "Python, Bash & Java"
+        - "Git & Maven"
 
   # Experience Section
   experience:
     enable: true
     items:
-      - company: "Freelance DevOps Engineer"
-        companyUrl: "https://github.com/3bdo7amouda"
+      - company: "LEVANTAR"
+        companyUrl: "https://levantar.com"
         jobs:
-          - name: "DevOps Engineer"
-            date: "2023 - Present"
+          - name: "Cloud Engineer"
+            date: "November 2025 - Present"
             content: |
-              Leading DevOps initiatives and infrastructure automation projects.
+              Managing Microsoft 365, Azure services, and hybrid infrastructure for distributed teams.
 
-              - Designed and implemented Kubernetes clusters for production workloads
-              - Automated infrastructure provisioning using Terraform and Ansible
-              - Built and maintained CI/CD pipelines using Jenkins and GitLab CI
-              - Implemented monitoring and logging solutions with Prometheus and Grafana
-              - Reduced deployment time by 70% through automation
-            featuredItems:
-              fontAwesomeIcons:
-                - icon: fab fa-docker
-                  url: https://www.docker.com/
-                - icon: fab fa-aws
-                  url: https://aws.amazon.com/
+              - Managed Microsoft 365, Azure services, and hybrid infrastructure to ensure reliable operations
+              - Enhanced identity and access security by implementing Entra ID policies aligned with compliance standards
+              - Improved team collaboration by refining SharePoint, Teams, and Exchange Online configurations
+              - Supported exploration of AI-driven monitoring concepts to enhance system performance and reliability
 
-      - company: "DevOps Projects"
-        companyUrl: "https://github.com/3bdo7amouda"
+      - company: "National Telecommunication Institute (NTI)"
+        companyUrl: "https://nti.sci.eg"
         jobs:
-          - name: "Cloud & Infrastructure Specialist"
-            date: "2021 - 2023"
+          - name: "Cloud DevOps Intern"
+            date: "September 2025 - Present"
             content: |
-              Developed and maintained cloud infrastructure and automation solutions.
+              Applied cloud engineering practices across AWS, Docker, Kubernetes, Terraform, Jenkins, Ansible, and DevSecOps tooling.
 
-              - Managed cloud infrastructure on AWS and Azure
-              - Implemented Docker containerization for applications
-              - Maintained CI/CD pipelines and deployment automation
-              - Collaborated with development teams on infrastructure requirements
+              - Applied cloud engineering practices across AWS, Docker, Kubernetes, Terraform, and Jenkins
+              - Built and tested CI/CD pipelines and automated infrastructure modules in hands-on lab environments
+              - Contributed to containerization and secure deployment workflows as part of real-world training projects
+
+      - company: "Digital Egypt Pioneers Initiative (DEPI)"
+        companyUrl: "https://depi.gov.eg"
+        jobs:
+          - name: "DevOps Engineer Intern"
+            date: "August 2024 - April 2025"
+            content: |
+              Developed CI/CD pipelines using Jenkins, Docker, and Kubernetes, improving delivery speed and consistency.
+
+              - Developed CI/CD pipelines using Jenkins, Docker, and Kubernetes
+              - Automated cloud infrastructure provisioning with Terraform and Ansible for repeatable deployments
+              - Deployed monitoring stacks with Prometheus and Grafana to enhance visibility and issue detection
 
   # Education Section
   education:
     enable: true
     index: false
     items:
-      - title: "Bachelor of Computer Science"
+      - title: "Bachelor of Communication and Electronics Engineering"
         school:
-          name: "University"
+          name: "Higher Institute of Engineering and Technology"
           url: "#"
-        date: "2017 - 2021"
+        date: "2021 - 2025"
+        GPA: "Good"
         content: |-
-          Focused on software engineering, cloud computing, and system administration.
+          Graduated June 2025
           
-          Relevant Coursework:
-            - Cloud Computing & Distributed Systems
-            - Network Administration
-            - Database Management
-            - Software Engineering
+          Focus on communication systems, electronics, and embedded systems with strong foundation in engineering principles and problem-solving.
 
   # Achievements Section
   achievements:
     enable: true
     items:
-      - title: Kubernetes Expert
-        content: Advanced expertise in Kubernetes cluster management, orchestration, and production deployments.
-      - title: Cloud Infrastructure Specialist
-        content: Proficient in designing and managing cloud infrastructure on AWS and Azure platforms.
-      - title: HiveBox DevOps End-to-End Project
-        content: Comprehensive DevOps pipeline implementation with full automation, monitoring, and deployment.
-        image: /images/hivebox-devops-end-to-end-project.png
-        url: https://github.com/3bdo7amouda
+      - title: AWS Certified Solutions Architect Associate
+        content: Certified in designing distributed systems and cloud architecture on AWS platform.
+        url: https://aws.amazon.com/certification/
+      - title: AWS Certified Cloud Practitioner
+        content: Foundation-level certification demonstrating cloud concepts and AWS services knowledge.
+        url: https://aws.amazon.com/certification/
+      - title: Oracle Cloud Infrastructure Certified Foundation Associate
+        content: Certified in Oracle Cloud Infrastructure fundamentals and core services.
+        url: https://education.oracle.com/
 
   # Projects Section
   projects:
     enable: true
     items:
-      - title: Kubernetes Cluster Setup
-        content: Production-grade Kubernetes cluster with high availability, monitoring, and automated deployments using ArgoCD.
-        image: /images/cluster k8s.png
-        badges:
-          - "Kubernetes"
-          - "Docker"
-          - "ArgoCD"
-          - "Helm"
-        links:
-          - icon: fab fa-github
-            url: https://github.com/3bdo7amouda
-
-      - title: Cloud Infrastructure Automation
-        content: Infrastructure as Code solution using Terraform to provision and manage AWS/Azure resources with automated CI/CD integration.
-        image: /images/architecture.png
-        badges:
-          - "Terraform"
-          - "AWS"
-          - "Azure"
-          - "CI/CD"
-        links:
-          - icon: fab fa-github
-            url: https://github.com/3bdo7amouda
-
-      - title: Complete DevOps Pipeline
-        content: End-to-end DevOps implementation with automated testing, security scanning, containerization, and deployment to Kubernetes.
-        image: /images/1_ljUexmRouhKF9s1wzLYrzg.png
-        badges:
-          - "Jenkins"
-          - "Docker"
-          - "SonarQube"
-          - "Kubernetes"
-        links:
-          - icon: fab fa-github
-            url: https://github.com/3bdo7amouda
-
-      - title: HiveBox DevOps Project
-        content: Comprehensive DevOps solution with containerization, orchestration, monitoring, and automated deployment pipeline.
+      - title: HiveBox - End-to-End DevOps Implementation
+        content: Comprehensive DevOps solution with Kubernetes microservices, CI/CD automation using GitHub Actions, ArgoCD, and Terraform Cloud. Includes Nginx Ingress, Valkey, Grafana monitoring, and Let's Encrypt security.
         image: /images/hivebox-devops-end-to-end-project.png
         featured:
           name: View Project
           link: https://github.com/3bdo7amouda
         badges:
-          - "Docker"
           - "Kubernetes"
+          - "ArgoCD"
+          - "GitHub Actions"
+          - "Terraform"
+          - "Grafana"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/3bdo7amouda
+
+      - title: Ultimate CI/CD DevOps Implementation Blueprint
+        content: Full CI/CD workflow for Spring Boot application using Terraform, Jenkins, ArgoCD, and Kubernetes. Applied GitOps principles and incorporated DevSecOps checks for secure build and release processes.
+        image: /images/1_ljUexmRouhKF9s1wzLYrzg.png
+        badges:
           - "Jenkins"
-          - "Monitoring"
+          - "Terraform"
+          - "ArgoCD"
+          - "Kubernetes"
+          - "DevSecOps"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/3bdo7amouda
+
+      - title: Kubernetes-Based Web Deployment
+        content: Deployed containerized web application using Kubernetes and Nginx Ingress. Automated build and deployment steps using Bash scripting and YAML definitions.
+        image: /images/architecture.png
+        badges:
+          - "Kubernetes"
+          - "Nginx"
+          - "Bash"
+          - "Docker"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/3bdo7amouda
+
+      - title: Kubernetes Cluster Deployment
+        content: Built a three-node Kubernetes cluster using Vagrant, VirtualBox, and Kubeadm. Implemented monitoring and tested microservice deployments using Prometheus and Grafana.
+        image: /images/cluster k8s.png
+        badges:
+          - "Kubernetes"
+          - "Vagrant"
+          - "Prometheus"
+          - "Grafana"
         links:
           - icon: fab fa-github
             url: https://github.com/3bdo7amouda
@@ -272,7 +276,7 @@ params:
       disableFeaturedImage: false
     socialNetworks:
       github: https://github.com/3bdo7amouda
-      linkedin: https://linkedin.com/in/abdelrahman-hamouda
+      linkedin: https://linkedin.com/in/3bdo7amouda
 
   listPages:
     disableFeaturedImage: false
