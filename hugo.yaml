@@ -228,6 +228,9 @@ params:
       - title: Ultimate CI/CD DevOps Implementation Blueprint
         content: Built a full CI/CD workflow for a Spring Boot application using Terraform, Jenkins, ArgoCD, and Kubernetes. Applied GitOps principles to deliver automated, version-controlled deployments. Incorporated DevSecOps checks into the pipeline for secure build and release processes.
         image: /images/1_ljUexmRouhKF9s1wzLYrzg.png
+        featured:
+          name: View Project
+          link: https://github.com/3bdo7amouda
         badges:
           - "Jenkins"
           - "Terraform"
@@ -242,6 +245,9 @@ params:
       - title: Kubernetes-Based Web Deployment
         content: Deployed a containerized web application using Kubernetes and Nginx Ingress. Automated build and deployment steps using Bash scripting and YAML definitions.
         image: /images/architecture.png
+        featured:
+          name: View Project
+          link: https://github.com/3bdo7amouda
         badges:
           - "Kubernetes"
           - "Nginx Ingress"
@@ -255,6 +261,9 @@ params:
       - title: Kubernetes Cluster Deployment
         content: Built a three-node Kubernetes cluster using Vagrant, VirtualBox, and Kubeadm. Implemented monitoring and tested microservice deployments using Prometheus and Grafana.
         image: /images/cluster-k8s.png
+        featured:
+          name: View Project
+          link: https://github.com/3bdo7amouda
         badges:
           - "Kubernetes"
           - "Kubeadm"
