@@ -1,0 +1,30 @@
+{{/*
+Utility partial: inlineImage
+Usage:
+  {{ partial "util/inlineImage.html" (dict "src" "/images/profile.jpg" "alt" "Profile" "class" "img-thumbnail" ) }}
+This reads the image from the local filesystem (static/...) and renders it as a data URI.
+*/}}
+{{ $src := .src }}
+{{ $alt := .alt | default "" }}
+{{ $class := .class | default "" }}
+{{ if not $src }}{{ errorf "inlineImage: src is required" }}{{ end }}
+
+{{/* Build filesystem path under static */}}
+{{ $path := cond (hasPrefix $src "/") (printf "static%s" $src) (printf "static/%s" $src) }}
+
+{{/* Determine MIME type from extension */}}
+{{ $lower := lower $path }}
+{{ $mime := "image/png" }}
+{{ if or (hasSuffix $lower ".jpg") (hasSuffix $lower ".jpeg") }}
+  {{ $mime = "image/jpeg" }}
+{{ else if hasSuffix $lower ".png" }}
+  {{ $mime = "image/png" }}
+{{ else if hasSuffix $lower ".svg" }}
+  {{ $mime = "image/svg+xml" }}
+{{ end }}
+
+{{/* Read and inline */}}
+{{ $bytes := readFile $path }}
+{{ if not $bytes }}{{ errorf (printf "inlineImage: file not found %s" $path) }}{{ end }}
+{{ $b64 := base64Encode $bytes }}
+<img src="data:{{ $mime }};base64,{{ $b64 }}" alt="{{ $alt }}" class="{{ $class }}">
