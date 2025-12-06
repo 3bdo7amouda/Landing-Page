@@ -35,7 +35,7 @@ params:
   title: "Abdelrahman Hamouda"
   description: "DevOps Engineer with practical experience building cloud-native systems, automating deployments, and managing modern infrastructure"
   favicon: "/fav.png"
-  staticPath: "/Landing-Page"
+  staticPath: ""
 
   useBootstrapCDN: false
   animate: true
