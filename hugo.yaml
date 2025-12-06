@@ -123,15 +123,10 @@ params:
       enable: true
       title: "Key Skills:"
       items:
-        - "AWS & Azure Cloud"
-        - "Docker & Kubernetes"
-        - "Terraform & Ansible"
-        - "Jenkins & CI/CD"
-        - "Linux (RHEL, Ubuntu)"
-        - "Windows Server"
-        - "Prometheus & Grafana"
-        - "Python, Bash & Java"
-        - "Git & Maven"
+        - "Cloud & DevOps with AWS, Azure, Docker, Kubernetes, Terraform, Ansible and Jenkins"
+        - "Operating Systems on Linux (RHEL, Ubuntu) and Windows Server"
+        - "Monitoring & Tools using Prometheus, Grafana, Git and Maven"
+        - "Programming in Python, Bash and Java"
 
   # Experience Section
   experience:
