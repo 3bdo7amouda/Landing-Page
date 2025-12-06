@@ -254,7 +254,7 @@ params:
 
       - title: Kubernetes Cluster Deployment
         content: Built a three-node Kubernetes cluster using Vagrant, VirtualBox, and Kubeadm. Implemented monitoring and tested microservice deployments using Prometheus and Grafana.
-        image: /images/cluster k8s.png
+        image: /images/cluster-k8s.png
         badges:
           - "Kubernetes"
           - "Kubeadm"
