@@ -41,6 +41,12 @@ jobs:
         uses: actions/configure-pages@v4
       - name: Install Node.js dependencies
         run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
+      - name: List static files before build
+        run: |
+          echo "=== Listing static/images ==="
+          ls -la static/images/ || echo "No static/images directory"
+          echo "=== Listing static/css ==="
+          ls -la static/css/ || echo "No static/css directory"
       - name: Build with Hugo
         env:
           HUGO_ENVIRONMENT: production
@@ -48,7 +54,16 @@ jobs:
         run: |
           hugo \
             --gc \
-            --minify
+            --minify \
+            --baseURL "https://3bdo7amouda.github.io/Landing-Page/"
+      - name: List built files after build
+        run: |
+          echo "=== Listing public/images ==="
+          ls -la public/images/ || echo "No public/images directory"
+          echo "=== Listing public/css ==="
+          ls -la public/css/ || echo "No public/css directory"
+          echo "=== Checking index.html for image paths ==="
+          grep -o 'src="[^"]*images[^"]*"' public/index.html | head -5 || echo "No image paths found"
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
