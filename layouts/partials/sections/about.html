@@ -8,7 +8,7 @@
 
                 {{ if .Site.Params.about.skills.enable }}
                 <h5 class="mt-4 mb-3 skills-title">{{ .Site.Params.about.skills.title }}</h5>
-                <ul class="skills-list">
+                <ul class="skills-list skills-list--single">
                     {{ range .Site.Params.about.skills.items }}
                     <li>{{ . | markdownify }}</li>
                     {{ end }}

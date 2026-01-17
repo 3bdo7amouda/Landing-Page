@@ -1,6 +1,6 @@
 baseURL: "https://3bdo7amouda.github.io/Landing-Page/"
 languageCode: "en-us"
-title: "Abdelrahman Hamouda | DevOps Engineer"
+title: "Abdelrahman Elsayed Hamouda | DevOps Engineer"
 relativeURLs: false
 canonifyURLs: true
 
@@ -32,8 +32,8 @@ Menus:
       weight: 1
 
 params:
-  title: "Abdelrahman Hamouda"
-  description: "DevOps Engineer with practical experience building cloud-native systems, automating deployments, and managing modern infrastructure"
+  title: "Abdelrahman Elsayed Hamouda"
+  description: "DevOps Engineer with 1+ year of hands-on experience building and managing cloud-native systems across AWS, Azure, and Linux environments. Skilled in CI/CD, containers, IaC, DevSecOps, and observability."
   favicon: "/fav.png"
   staticPath: ""
 
@@ -88,9 +88,9 @@ params:
   hero:
     enable: true
     intro: "Hi, I'm"
-    title: "Abdelrahman Hamouda"
+    title: "Abdelrahman Elsayed Hamouda"
     subtitle: "DevOps Engineer"
-    content: "DevOps Engineer with practical experience building cloud-native systems, automating deployments, and managing modern infrastructure across cloud platforms and Linux environments. Skilled in CI/CD pipelines, containerization, and Infrastructure as Code. Strong ability to improve delivery processes, enhance system reliability, and apply DevSecOps and monitoring best practices."
+    content: "DevOps Engineer with 1+ year of hands-on experience building and managing cloud-native systems, automating deployments, and maintaining resilient infrastructure across AWS, Azure, and Linux environments. Proficient in CI/CD pipelines, containerization, Infrastructure as Code, and DevSecOps practices. Skilled at optimizing delivery workflows, enhancing system reliability, and implementing observability, monitoring, and security measures across production and training environments."
     image: /images/profile.jpg
     bottomImage:
       enable: true
@@ -107,8 +107,10 @@ params:
           url: https://github.com/3bdo7amouda
         - icon: fab fa-linkedin
           url: https://linkedin.com/in/3bdo7amouda
+        - icon: fas fa-award
+          url: https://credly.com/users/3bdo7amouda
         - icon: fas fa-envelope
-          url: mailto:abdelrahman.hamouda29@gmail.com
+          url: mailto:abderlrahman.hamouda29@gmail.com
 
   # About Section
   about:
@@ -116,17 +118,21 @@ params:
     title: "About Me"
     image: "/images/profile.jpg"
     content: |-
-      DevOps Engineer with practical experience building cloud-native systems, automating deployments, and managing modern infrastructure across cloud platforms and Linux environments. 
-      
-      Skilled in CI/CD pipelines, containerization, and Infrastructure as Code. Strong ability to improve delivery processes, enhance system reliability, and apply DevSecOps and monitoring best practices across real-world projects and training environments.
+      DevOps Engineer with 1+ year of hands-on experience building and managing cloud-native systems, automating deployments, and maintaining resilient infrastructure across AWS, Azure, and Linux environments.
+
+      Proficient in CI/CD pipelines, containerization, Infrastructure as Code, and DevSecOps practices. Skilled at optimizing delivery workflows, enhancing system reliability, and implementing observability, monitoring, and security measures across production and training environments.
     skills:
       enable: true
-      title: "Key Skills:"
+      title: "Key Skills"
       items:
-        - "Cloud & DevOps with AWS, Azure, Docker, Kubernetes, Terraform, Ansible and Jenkins"
-        - "Operating Systems on Linux (RHEL, Ubuntu) and Windows Server"
-        - "Monitoring & Tools using Prometheus, Grafana, Git and Maven"
-        - "Programming in Python, Bash and Java"
+        - "DevOps & CI/CD: Git, GitLab, Jenkins, SonarQube, Argo CD"
+        - "Containers & Orchestration: Docker, Kubernetes, OpenShift"
+        - "Cloud Platforms: AWS (EC2, VPC, IAM, Lambda, S3), Microsoft Azure"
+        - "Infrastructure as Code: Terraform, Ansible"
+        - "Automation & Scripting: Bash, Python"
+        - "Monitoring & Security: Prometheus, Grafana, OWASP ZAP, Snyk, GitLeaks"
+        - "Linux Systems: RHEL, Ubuntu, CentOS (Users, Networking, Storage)"
+        - "Networking: TCP/IP, Routing, Switching (CCNA-level)"
 
   # Experience Section
   experience:
@@ -138,8 +144,6 @@ params:
           - name: "Cloud Engineer"
             date: "November 2025 - Present"
             content: |
-              Managing Microsoft 365, Azure services, and hybrid infrastructure for distributed teams.
-
               - Managed Microsoft 365, Azure services, and hybrid infrastructure to ensure reliable operations for distributed teams
               - Enhanced identity and access security by implementing Entra ID policies aligned with compliance standards
               - Improved team collaboration by refining SharePoint, Teams, and Exchange Online configurations
@@ -151,11 +155,10 @@ params:
           - name: "Cloud DevOps Intern"
             date: "September 2025 - Present"
             content: |
-              Applied cloud engineering practices across AWS, Docker, Kubernetes, Terraform, Jenkins, Ansible, and DevSecOps tooling.
-
-              - Applied cloud engineering practices across AWS, Docker, Kubernetes, Terraform, Jenkins, Ansible, and DevSecOps tooling
-              - Built and tested CI/CD pipelines and automated infrastructure modules in hands-on lab environments
-              - Contributed to containerization and secure deployment workflows as part of real-world training projects
+              - Linux & Automation: Administer RHEL servers (users, groups, services, storage, SSH, security hardening) and automate tasks using Bash, Python, and Ansible
+              - Containers & Orchestration: Build, deploy, and manage applications with Docker, Kubernetes (CKA track), and OpenShift
+              - Cloud & DevOps: Design and manage AWS solutions (EC2, VPC, IAM, storage, HA architectures) and implement CI/CD pipelines with Git, GitLab, Jenkins, SonarQube, ArgoCD, integrating security tools (Snyk, OWASP ZAP, GitLeaks)
+              - Monitoring & Collaboration: Monitor infrastructure and applications with Prometheus; work in Agile/Scrum teams with a security-first approach
 
       - company: "Digital Egypt Pioneers Initiative (DEPI)"
         companyUrl: "https://depi.gov.eg"
@@ -163,8 +166,6 @@ params:
           - name: "DevOps Engineer Intern"
             date: "August 2024 - April 2025"
             content: |
-              Developed CI/CD pipelines using Jenkins, Docker, and Kubernetes, improving delivery speed and consistency.
-
               - Developed CI/CD pipelines using Jenkins, Docker, and Kubernetes, improving delivery speed and consistency
               - Automated cloud infrastructure provisioning with Terraform and Ansible for repeatable deployments
               - Deployed monitoring stacks with Prometheus and Grafana to enhance visibility and issue detection
@@ -204,7 +205,11 @@ params:
     enable: true
     items:
       - title: HiveBox - End-to-End DevOps Implementation Project
-        content: Designed and deployed a Kubernetes microservices environment using Nginx Ingress and Valkey. Implemented CI/CD automation with GitHub Actions, ArgoCD, and Terraform Cloud. Added observability and security controls with Grafana, Cert-Manager, and Let's Encrypt.
+        content: |
+          Deployed a scalable Kubernetes microservices environment with Nginx Ingress and Valkey.
+          Automated CI/CD pipelines with GitHub Actions, ArgoCD, and Terraform Cloud.
+          Enabled observability and monitoring with Grafana, Prometheus, and custom dashboards.
+          Applied security, storage, and readiness with Cert-Manager, Lets Encrypt, and MinIO S3.
         image: /images/hivebox-devops-end-to-end-project.png
         featured:
           name: View Project
@@ -214,24 +219,31 @@ params:
           - "ArgoCD"
           - "GitHub Actions"
           - "Terraform Cloud"
+          - "Prometheus"
           - "Grafana"
           - "Nginx Ingress"
+          - "Cert-Manager"
         links:
           - icon: fab fa-github
             url: https://github.com/3bdo7amouda
 
       - title: Ultimate CI/CD DevOps Implementation Blueprint
-        content: Built a full CI/CD workflow for a Spring Boot application using Terraform, Jenkins, ArgoCD, and Kubernetes. Applied GitOps principles to deliver automated, version-controlled deployments. Incorporated DevSecOps checks into the pipeline for secure build and release processes.
+        content: |
+          Set up DNS (ExternalDNS) and certificates (Cert-Manager) for production readiness.
+          Automate dependency updates and security checks with Dependabot.
+          Move external services into the Kubernetes cluster using open-source tools.
+          Build multi-environment clusters (Dev, Stage, Prod) with Terraform and Kustomize, and enforce policies with Kyverno.
         image: /images/1_ljUexmRouhKF9s1wzLYrzg.png
         featured:
           name: View Project
           link: https://github.com/3bdo7amouda
         badges:
-          - "Jenkins"
           - "Terraform"
-          - "ArgoCD"
           - "Kubernetes"
-          - "GitOps"
+          - "Kustomize"
+          - "Kyverno"
+          - "Cert-Manager"
+          - "ExternalDNS"
           - "DevSecOps"
         links:
           - icon: fab fa-github
@@ -273,9 +285,9 @@ params:
   # Contact Section
   contact:
     enable: true
-    content: I'm always open to discussing DevOps projects, cloud architecture, or potential opportunities. Feel free to reach out!
+    content: "Open to DevOps/Cloud opportunities and collaborations. Email: abderlrahman.hamouda29@gmail.com | Phone: (+201004624196)"
     btnName: Email Me
-    btnLink: mailto:abdelrahman.hamouda29@gmail.com
+    btnLink: mailto:abderlrahman.hamouda29@gmail.com
 
   footer:
     recentPosts:
