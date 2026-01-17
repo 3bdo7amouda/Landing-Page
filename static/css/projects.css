@@ -62,3 +62,193 @@
 #projects .float-end .btn:focus {
     box-shadow: none !important;
 }
+
+/* ========================================
+   PROJECTS SECTION - Enhanced
+   ======================================== */
+
+#projects {
+    padding: 100px 0;
+    background: var(--secondary-color);
+}
+
+#projects h3 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--text-color);
+}
+
+#projects h3::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: var(--primary-color);
+    margin: 1rem auto 0;
+}
+
+.project-card {
+    background: var(--background-color);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    height: 100%;
+    border: 2px solid transparent;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 60px rgba(37, 99, 235, 0.15);
+    border-color: var(--primary-color);
+}
+
+.project-card .project-image {
+    overflow: hidden;
+    height: 250px;
+}
+
+.project-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.project-card:hover img {
+    transform: scale(1.1);
+}
+
+.project-card .card-body {
+    padding: 2rem;
+}
+
+.project-card h5 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+.project-card .text-secondary {
+    color: var(--text-secondary-color) !important;
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
+}
+
+.project-card .badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 1.5rem 0;
+}
+
+.project-card .badge {
+    background: rgba(37, 99, 235, 0.1);
+    color: var(--primary-color);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border: none;
+}
+
+.project-card .project-links {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+body.dark .project-card .project-links {
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.project-card .project-link {
+    color: var(--text-color);
+    font-size: 1.3rem;
+    transition: all 0.3s ease;
+}
+
+.project-card .project-link:hover {
+    color: var(--primary-color);
+    transform: translateY(-3px);
+}
+
+.project-card .btn-outline {
+    padding: 0.5rem 1.5rem;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    background: transparent;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.project-card .btn-outline:hover {
+    background: var(--primary-color);
+    color: white;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+
+@media (max-width: 768px) {
+    #hero {
+        padding: 60px 0 40px;
+        text-align: center;
+    }
+    
+    #hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    #hero h2 {
+        font-size: 1.8rem;
+    }
+    
+    #hero .btn-group {
+        justify-content: center;
+    }
+    
+    #hero .social-icons {
+        justify-content: center;
+    }
+    
+    #hero .image img {
+        max-width: 300px;
+        margin: 2rem auto;
+    }
+    
+    section h3 {
+        font-size: 2rem !important;
+    }
+    
+    .project-card .project-image {
+        height: 200px;
+    }
+}
+
+/* Dark Mode Enhancements */
+body.dark {
+    color-scheme: dark;
+}
+
+body.dark #hero::before {
+    background: 
+        radial-gradient(circle at 20% 50%, rgba(59, 130, 246, 0.08) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(37, 99, 235, 0.08) 0%, transparent 50%);
+}
+
+body.dark .project-card {
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+body.dark .project-card:hover {
+    box-shadow: 0 20px 60px rgba(59, 130, 246, 0.2);
+}

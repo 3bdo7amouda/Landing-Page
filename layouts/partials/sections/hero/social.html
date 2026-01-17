@@ -1,23 +1,17 @@
-<span>
-    {{ range .Site.Params.hero.socialLinks.fontAwesomeIcons }}
-    <span class="px-1">
-        <a href="{{ .url }}"
-            {{ if not (hasPrefix .url "#") }} target="_blank" {{ end }}
-            class="btn social-icon"
-        >
-            <i class="{{ .icon }}"></i>
-        </a>
-    </span>
-    {{ end }}
+{{ range .Site.Params.hero.socialLinks.fontAwesomeIcons }}
+<a href="{{ .url }}"
+   {{ if not (hasPrefix .url "#") }}target="_blank"{{ end }}
+   class="social-icon"
+   aria-label="Social Link">
+    <i class="{{ .icon }}"></i>
+</a>
+{{ end }}
 
-    {{ range .Site.Params.hero.socialLinks.customIcons }}
-    <span class="px-1">
-        <a href="{{ .url }}"
-            {{ if not (hasPrefix .url "#") }} target="_blank" {{ end }}
-            class="btn social-icon"
-        >
-            <img src="{{ .icon }}">
-        </a>
-    </span>
-    {{ end }}
-</span>
+{{ range .Site.Params.hero.socialLinks.customIcons }}
+<a href="{{ .url }}"
+   {{ if not (hasPrefix .url "#") }}target="_blank"{{ end }}
+   class="social-icon"
+   aria-label="Social Link">
+    <img src="{{ .icon }}" alt="Social Icon">
+</a>
+{{ end }}
