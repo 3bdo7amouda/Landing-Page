@@ -7,567 +7,499 @@
 <meta name="description" content="DevOps Engineer building secure delivery pipelines, cloud-native platforms on AWS and Azure, and observability. AZ-400 Expert, AZ-104, AWS certified.">
 <meta property="og:title" content="Abdelrahman Hamouda — DevOps Engineer">
 <meta property="og:description" content="I build the road to production, and the guardrails along it.">
-<meta property="og:image" content="https://3bdo7amouda.github.io/Landing-Page/images/profile.jpg">
-<meta name="theme-color" content="#0b0b0c">
+<meta property="og:image" content="https://3bdo7amouda.github.io/Landing-Page/images/portrait.jpg">
+<meta name="theme-color" content="#04050a">
 <link rel="icon" href="fav.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;500&family=Manrope:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#0b0b0c; --bg2:#121213; --ink:#ece8df; --mute:#8d897f; --dim:#55524c; --line:rgba(236,232,223,.12); --line2:rgba(236,232,223,.22);
-  --acc:#c8ff4d; --warn:#ffb020;
-  --serif:'Instrument Serif','Times New Roman',serif; --sans:'Inter Tight',system-ui,-apple-system,'Segoe UI',sans-serif; --mono:'JetBrains Mono',ui-monospace,Consolas,monospace;
-  --pad:clamp(20px,4vw,56px); --ease:cubic-bezier(.19,1,.22,1);
+  --bg:#04050a; --ink:#e9edf6; --mute:#8089a0; --dim:#4a5266; --line:rgba(255,255,255,.08); --line2:rgba(255,255,255,.16);
+  --c1:#5ef2ff; --c2:#8f7bff; --c3:#ff6ad5; --ok:#4dffa6; --warn:#ffc24d;
+  --grad:linear-gradient(100deg,var(--c1),var(--c2) 55%,var(--c3));
+  --disp:'Unbounded',system-ui,sans-serif; --sans:'Manrope',system-ui,-apple-system,'Segoe UI',sans-serif; --mono:'JetBrains Mono',ui-monospace,Consolas,monospace;
+  --pad:clamp(18px,4vw,60px); --ease:cubic-bezier(.19,1,.22,1); --r:20px;
 }
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.55;overflow-x:clip;-webkit-font-smoothing:antialiased;padding-bottom:32px}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.6;overflow-x:clip;-webkit-font-smoothing:antialiased;padding-bottom:32px}
 a{color:inherit;text-decoration:none}
 button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
-::selection{background:var(--acc);color:var(--bg)}
-.mono{font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;text-transform:uppercase}
-.serif{font-family:var(--serif);font-weight:400}
-.acc{color:var(--acc)}
-em{font-family:var(--serif);font-style:italic;font-weight:400}
-.pad{padding-inline:var(--pad)}
+::selection{background:var(--c1);color:var(--bg)}
+.mono{font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase}
+.grad{background:var(--grad);background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 7s linear infinite}
+@keyframes shine{to{background-position:200% 0}}
+.wrap{width:min(1320px,100%);margin-inline:auto;padding-inline:var(--pad)}
 @media (pointer:fine){body.cur,body.cur a,body.cur button{cursor:none}}
 
-/* grain */
-.grain{position:fixed;inset:-50%;width:200%;height:200%;pointer-events:none;z-index:90;opacity:.07;
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-  animation:grain 1.2s steps(6) infinite}
-@keyframes grain{0%{transform:translate(0,0)}20%{transform:translate(-3%,2%)}40%{transform:translate(2%,-3%)}60%{transform:translate(-2%,-2%)}80%{transform:translate(3%,3%)}100%{transform:translate(0,0)}}
+/* background */
+#space{position:fixed;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}
+.aur{position:fixed;border-radius:50%;filter:blur(110px);pointer-events:none;z-index:0;opacity:.34}
+.aur.a{width:620px;height:620px;background:#1c3cff;top:-240px;right:-160px;animation:float 20s ease-in-out infinite alternate}
+.aur.b{width:520px;height:520px;background:#7a1cff;bottom:-260px;left:-180px;opacity:.22;animation:float 26s ease-in-out infinite alternate-reverse}
+@keyframes float{to{transform:translate(-70px,60px) scale(1.15)}}
+.gridbg{position:fixed;inset:0;z-index:0;pointer-events:none;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:64px 64px;-webkit-mask-image:radial-gradient(ellipse 80% 60% at 50% 0%,#000,transparent);mask-image:radial-gradient(ellipse 80% 60% at 50% 0%,#000,transparent);opacity:.55}
+main,nav,footer{position:relative;z-index:2}
 
 /* cursor */
-#cur{position:fixed;left:0;top:0;z-index:120;pointer-events:none;width:12px;height:12px;margin:-6px 0 0 -6px;border-radius:50%;background:var(--acc);mix-blend-mode:difference;display:none;align-items:center;justify-content:center;transition:width .35s var(--ease),height .35s var(--ease),margin .35s var(--ease),background .2s}
-#cur span{font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--bg);opacity:0;transition:opacity .2s;white-space:nowrap}
-body.cur #cur{display:flex}
-#cur.link{width:46px;height:46px;margin:-23px 0 0 -23px}
-#cur.label{width:92px;height:92px;margin:-46px 0 0 -46px;mix-blend-mode:normal}
-#cur.label span{opacity:1}
+#cur{position:fixed;left:0;top:0;z-index:120;pointer-events:none;width:34px;height:34px;margin:-17px 0 0 -17px;border-radius:50%;border:1px solid rgba(94,242,255,.7);display:none;transition:width .3s var(--ease),height .3s var(--ease),margin .3s var(--ease),background .3s,border-color .3s}
+#cur::after{content:"";position:absolute;left:50%;top:50%;width:4px;height:4px;margin:-2px;border-radius:50%;background:var(--c1)}
+body.cur #cur{display:block}
+#cur.link{width:58px;height:58px;margin:-29px 0 0 -29px;background:rgba(94,242,255,.1);border-color:var(--c1)}
 
 /* loader */
-#loader{position:fixed;inset:0;z-index:200;background:var(--bg);display:flex;flex-direction:column;justify-content:space-between;padding:var(--pad);transition:transform 1.1s var(--ease);animation:failsafe 0s linear 6s forwards}
-@keyframes failsafe{to{transform:translateY(-101%)}}
-#loader.done{transform:translateY(-101%)}
-#loader .steps{color:var(--mute);display:flex;flex-direction:column;gap:6px}
-#loader .steps div{opacity:.25;transition:opacity .3s}
-#loader .steps div.on{opacity:1;color:var(--ink)}
-#loader .steps div.on::before{content:"✔ ";color:var(--acc)}
-#loader .num{font-family:var(--serif);font-size:clamp(110px,24vw,340px);line-height:.8;letter-spacing:-.04em;align-self:flex-end}
-#loader .num sup{font-size:.25em;color:var(--acc);vertical-align:top;margin-left:.1em}
+#loader{position:fixed;inset:0;z-index:200;background:var(--bg);display:flex;align-items:center;justify-content:center;transition:opacity .7s,visibility .7s;animation:failsafe 0s linear 5s forwards}
+@keyframes failsafe{to{opacity:0;visibility:hidden}}
+#loader.done{opacity:0;visibility:hidden}
+#loader .box{width:min(360px,80vw)}
+#loader .l{color:var(--mute);display:flex;justify-content:space-between;margin-bottom:12px}
+#loader .bar{height:2px;background:var(--line);overflow:hidden}
+#loader .bar i{display:block;height:100%;width:0;background:var(--grad);box-shadow:0 0 14px var(--c1)}
 
 /* nav */
-nav{position:fixed;top:0;left:0;right:0;z-index:60;display:flex;justify-content:space-between;align-items:center;padding:22px var(--pad);mix-blend-mode:difference;color:#fff}
-nav .brand{font-family:var(--serif);font-size:24px;letter-spacing:-.01em}
-nav .brand i{color:var(--acc)}
-nav .links{display:flex;gap:30px}
-nav .links a{position:relative;opacity:.75;transition:opacity .2s}
-nav .links a:hover{opacity:1}
-nav .avail{display:flex;align-items:center;gap:10px}
-.pulse{width:8px;height:8px;border-radius:50%;background:var(--acc);position:relative;flex:none}
-.pulse::after{content:"";position:absolute;inset:-5px;border-radius:50%;border:1px solid var(--acc);animation:ping 2s ease-out infinite}
-@keyframes ping{from{transform:scale(.4);opacity:1}to{transform:scale(1.6);opacity:0}}
-@media (max-width:900px){nav .links{display:none}}
+nav{position:fixed;top:14px;left:50%;transform:translateX(-50%);z-index:60;display:flex;align-items:center;gap:26px;padding:10px 12px 10px 20px;border:1px solid var(--line);border-radius:99px;background:rgba(8,10,18,.6);backdrop-filter:blur(16px) saturate(1.4);white-space:nowrap}
+nav .brand{font-family:var(--disp);font-size:13px;font-weight:500;letter-spacing:.04em}
+nav .links{display:flex;gap:22px;color:var(--mute)}
+nav .links a{transition:color .2s}nav .links a:hover{color:var(--ink)}
+nav .go{display:flex;align-items:center;gap:8px;padding:8px 14px;border-radius:99px;background:rgba(77,255,166,.08);border:1px solid rgba(77,255,166,.3);color:var(--ok)}
+.pulse{width:7px;height:7px;border-radius:50%;background:currentColor;position:relative;flex:none}
+.pulse::after{content:"";position:absolute;inset:-4px;border-radius:50%;border:1px solid currentColor;animation:ping 2s ease-out infinite}
+@keyframes ping{from{transform:scale(.5);opacity:1}to{transform:scale(1.7);opacity:0}}
+@media (max-width:860px){nav .links{display:none}.aur{opacity:.16!important}}
 
-/* reveal helpers */
-.ln{display:block;overflow:hidden;padding-bottom:.08em;margin-bottom:-.08em}
-.ln>span{display:block;transform:translateY(110%);transition:transform 1.3s var(--ease)}
-.in .ln>span,.ln.in>span{transform:none}
-.ln:nth-child(2)>span{transition-delay:.09s}.ln:nth-child(3)>span{transition-delay:.18s}
-.fx{opacity:0;transform:translateY(26px);transition:opacity 1s var(--ease),transform 1s var(--ease)}
+/* reveal */
+.fx{opacity:0;transform:translateY(24px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
 .fx.in{opacity:1;transform:none}
-.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}
+.d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}.d4{transition-delay:.32s}.d5{transition-delay:.4s}
 
 /* hero */
-.hero{position:relative;min-height:100vh;min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;padding:120px var(--pad) 54px;overflow:hidden}
-#dots{position:absolute;inset:0;width:100%;height:100%}
-.hero-meta{position:absolute;top:96px;left:var(--pad);right:var(--pad);display:flex;justify-content:space-between;color:var(--mute);gap:20px}
-.portrait{position:absolute;right:calc(var(--pad) + 4vw);top:16vh;width:clamp(180px,21vw,330px);aspect-ratio:3/4;overflow:hidden;border-radius:4px;clip-path:inset(100% 0 0 0);transition:clip-path 1.6s var(--ease) .3s}
-.ready .portrait{clip-path:inset(0)}
-.portrait img{width:100%;height:118%;object-fit:cover;object-position:center 18%;filter:grayscale(1) contrast(1.08) brightness(.82);transition:filter .8s;will-change:transform}
-.portrait:hover img{filter:none}
-.portrait .cap{position:absolute;left:10px;bottom:10px;background:var(--bg);padding:5px 9px;color:var(--ink);display:flex;gap:8px;align-items:center}
-h1{position:relative;font-family:var(--serif);font-weight:400;font-size:clamp(64px,14.6vw,260px);line-height:.84;letter-spacing:-.035em;margin-left:-.04em;pointer-events:none}
-h1 em{color:var(--acc)}
-h1 .ln:nth-child(2){padding-left:.9em}
-.hero-foot{position:relative;display:grid;grid-template-columns:1fr auto;gap:30px;align-items:end;margin-top:44px;border-top:1px solid var(--line);padding-top:22px}
-.hero-foot p{max-width:470px;font-size:18px;color:var(--mute)}
-.hero-foot p b{color:var(--ink);font-weight:500}
+.hero{min-height:100vh;min-height:100svh;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:30px;padding-top:90px;padding-bottom:40px}
+.kick{display:inline-flex;gap:12px;align-items:center;color:var(--c1)}
+.kick::before{content:"";width:34px;height:1px;background:var(--c1)}
+h1{font-family:var(--disp);font-weight:300;font-size:clamp(34px,5.5vw,84px);line-height:1.02;letter-spacing:-.03em;margin:22px 0 22px}
+h1 b{font-weight:500;display:block}
+.role{font-family:var(--mono);font-size:clamp(13px,1.3vw,16px);color:var(--mute);min-height:1.7em}
+.role i{font-style:normal;color:var(--ink)}
+.caret{display:inline-block;width:8px;height:1.05em;background:var(--c1);vertical-align:-3px;margin-left:3px;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.lead{max-width:500px;color:var(--mute);font-size:17px;margin:18px 0 30px}
+.lead b{color:var(--ink);font-weight:500}
 .cta{display:flex;gap:12px;flex-wrap:wrap}
-.btn{display:inline-flex;align-items:center;gap:12px;height:54px;padding:0 26px;border-radius:99px;border:1px solid var(--line2);font-weight:500;position:relative;overflow:hidden;transition:color .4s var(--ease),border-color .4s;isolation:isolate}
-.btn::before{content:"";position:absolute;inset:0;background:var(--acc);border-radius:99px;transform:translateY(101%);transition:transform .5s var(--ease);z-index:-1}
-.btn:hover{color:var(--bg);border-color:var(--acc)}.btn:hover::before{transform:none}
-.btn.fill{background:var(--ink);color:var(--bg);border-color:var(--ink)}
-.btn svg{width:15px;height:15px;transition:transform .4s var(--ease)}
-.btn:hover svg{transform:translate(3px,-3px)}
-@media (max-width:760px){.hero-foot{grid-template-columns:1fr}.portrait{top:15vh;right:var(--pad);width:40vw}.hero-meta span:nth-child(2){display:none}h1 .ln:nth-child(2){padding-left:0}}
+.btn{display:inline-flex;align-items:center;gap:10px;height:50px;padding:0 24px;border-radius:14px;font-weight:600;font-size:15px;border:1px solid var(--line2);background:rgba(255,255,255,.03);transition:transform .3s var(--ease),border-color .3s,box-shadow .3s}
+.btn:hover{transform:translateY(-2px);border-color:var(--c1);box-shadow:0 10px 40px -12px rgba(94,242,255,.5)}
+.btn.p{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.btn.p:hover{box-shadow:0 10px 50px -8px rgba(143,123,255,.8)}
+.btn svg{width:15px;height:15px}
+.mini{display:flex;gap:34px;margin-top:44px;padding-top:22px;border-top:1px solid var(--line)}
+.mini b{display:block;font-family:var(--disp);font-weight:400;font-size:28px;line-height:1.1}
+.mini span{color:var(--mute)}
 
-/* marquee */
-.band{border-block:1px solid var(--line);overflow:hidden;padding:18px 0;white-space:nowrap}
-.band .t{display:inline-flex;gap:48px;animation:slide 38s linear infinite;padding-right:48px;will-change:transform}
-.band .t span{font-family:var(--serif);font-size:clamp(34px,5vw,72px);line-height:1}
-.band .t span:nth-child(even){font-style:italic;color:transparent;-webkit-text-stroke:1px var(--mute)}
-.band .t b{color:var(--acc);font-weight:400;font-size:clamp(20px,3vw,40px);align-self:center}
-.band.rev .t{animation-direction:reverse}
-@keyframes slide{to{transform:translateX(-50%)}}
+/* core (portrait + orbits) */
+.core{position:relative;width:min(540px,100%);aspect-ratio:1;margin-inline:auto}
+.core svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.core svg.back{z-index:1}.core svg.front{z-index:4}
+.core .halo{position:absolute;left:50%;top:50%;width:66%;aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;background:radial-gradient(circle,rgba(94,242,255,.22),rgba(143,123,255,.12) 45%,transparent 68%);filter:blur(10px);z-index:0;animation:breathe 5s ease-in-out infinite}
+@keyframes breathe{50%{transform:translate(-50%,-50%) scale(1.08);opacity:.75}}
+.face{position:absolute;left:50%;top:50%;width:52%;aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;z-index:3;padding:3px;background:conic-gradient(from var(--ang,0deg),var(--c1),var(--c2),var(--c3),transparent 60%,var(--c1));animation:spin 7s linear infinite}
+@property --ang{syntax:'<angle>';inherits:false;initial-value:0deg}
+@keyframes spin{to{--ang:360deg}}
+.face .in{position:relative;width:100%;height:100%;border-radius:50%;overflow:hidden;background:var(--bg)}
+.face img{width:100%;height:100%;object-fit:cover;object-position:50% 34%;transform:scale(1.28);transform-origin:50% 40%;filter:saturate(.8) contrast(1.06);transition:filter .6s,transform .8s var(--ease)}
+.face:hover img{filter:none;transform:scale(1.34)}
+.face .in::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(160deg,rgba(94,242,255,.2),transparent 45%,rgba(143,123,255,.28));mix-blend-mode:soft-light;pointer-events:none}
+.face .in::after{content:"";position:absolute;left:0;right:0;height:26%;top:-30%;z-index:2;background:linear-gradient(transparent,rgba(94,242,255,.22),transparent);animation:scan 4.5s linear infinite;pointer-events:none}
+@keyframes scan{to{top:110%}}
+.chip{position:absolute;left:50%;top:50%;font-family:var(--mono);font-size:11px;letter-spacing:.06em;padding:6px 11px;border-radius:99px;border:1px solid var(--line2);background:rgba(8,10,18,.82);backdrop-filter:blur(6px);white-space:nowrap;display:flex;gap:7px;align-items:center;will-change:transform}
+.chip i{width:6px;height:6px;border-radius:50%;background:var(--c1);box-shadow:0 0 8px var(--c1)}
+.chip.v i{background:var(--c2);box-shadow:0 0 8px var(--c2)}
+.hudt{position:absolute;color:var(--mute);z-index:5;line-height:1.7}
+.hudt b{color:var(--ink);font-weight:500}
+.hudt.tl{left:0;top:4%}.hudt.tr{right:0;top:4%;text-align:right}.hudt.bl{left:0;bottom:4%}.hudt.br{right:0;bottom:4%;text-align:right}
+@media (max-width:960px){.hero{grid-template-columns:1fr;padding-top:96px;gap:10px}.core{order:-1;width:min(380px,92%)}.hudt{display:none}.mini{gap:22px}}
 
-/* section frame */
-section{position:relative}
-.sec{padding:clamp(90px,13vw,190px) var(--pad) 0}
-.tag{display:flex;gap:14px;align-items:center;color:var(--mute);margin-bottom:clamp(30px,5vw,70px)}
-.tag i{font-style:normal;color:var(--acc)}
-.tag::after{content:"";flex:1;height:1px;background:var(--line)}
-h2{font-family:var(--serif);font-weight:400;font-size:clamp(44px,7.4vw,128px);line-height:.92;letter-spacing:-.03em}
-h2 em{color:var(--acc)}
+/* sections */
+.sec{padding-top:clamp(70px,9vw,120px)}
+.sh{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap;margin-bottom:28px}
+.sh .t{color:var(--c1);display:flex;gap:12px;align-items:center;margin-bottom:12px}
+.sh .t::before{content:"";width:8px;height:8px;border:1px solid var(--c1);transform:rotate(45deg)}
+h2{font-family:var(--disp);font-weight:300;font-size:clamp(26px,3.4vw,48px);line-height:1.1;letter-spacing:-.025em}
+h2 b{font-weight:500}
+.sh p{color:var(--mute);max-width:380px}
 
-/* statement */
-.state{font-family:var(--serif);font-size:clamp(30px,4.7vw,80px);line-height:1.06;letter-spacing:-.02em;max-width:19em}
-.state .w{opacity:.14;transition:opacity .35s}
-.state .w.on{opacity:1}
-.state .w.k{font-style:italic}
-.state .w.k.on{color:var(--acc)}
-.about{display:grid;grid-template-columns:1fr 1fr 1fr;gap:clamp(24px,4vw,70px);margin-top:clamp(50px,8vw,110px);padding-top:26px;border-top:1px solid var(--line)}
-.about p{color:var(--mute);font-size:17px}
-.about p b{color:var(--ink);font-weight:500}
-.about dl{display:grid;grid-template-columns:auto 1fr;gap:10px 22px;align-content:start}
-.about dt{color:var(--dim)}.about dd{font-size:15px}
-@media (max-width:900px){.about{grid-template-columns:1fr}}
+/* glass card */
+.card{position:relative;border:1px solid var(--line);border-radius:var(--r);background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.015));backdrop-filter:blur(12px);padding:26px;overflow:hidden;transition:border-color .4s,transform .25s}
+.card::before{content:"";position:absolute;inset:0;background:radial-gradient(460px circle at var(--x,50%) var(--y,-20%),rgba(94,242,255,.11),transparent 45%);opacity:0;transition:opacity .4s;pointer-events:none}
+.card:hover{border-color:var(--line2)}.card:hover::before{opacity:1}
+.hud::after{content:"";position:absolute;inset:10px;pointer-events:none;opacity:.7;
+  background:linear-gradient(var(--c1),var(--c1)) left top/14px 1px,linear-gradient(var(--c1),var(--c1)) left top/1px 14px,linear-gradient(var(--c1),var(--c1)) right top/14px 1px,linear-gradient(var(--c1),var(--c1)) right top/1px 14px,linear-gradient(var(--c1),var(--c1)) left bottom/14px 1px,linear-gradient(var(--c1),var(--c1)) left bottom/1px 14px,linear-gradient(var(--c1),var(--c1)) right bottom/14px 1px,linear-gradient(var(--c1),var(--c1)) right bottom/1px 14px;background-repeat:no-repeat}
+.lab{color:var(--mute);display:flex;justify-content:space-between;margin-bottom:16px}
 
-/* stats */
-.stats{display:grid;grid-template-columns:repeat(4,1fr);margin-top:clamp(60px,9vw,130px);border-top:1px solid var(--line)}
-.stat{padding:26px 22px 0 0;border-right:1px solid var(--line);padding-left:22px}
-.stat:first-child{padding-left:0}.stat:last-child{border:0}
-.stat b{display:block;font-family:var(--serif);font-weight:400;font-size:clamp(64px,9vw,150px);line-height:.9;letter-spacing:-.04em}
-.stat b sup{font-size:.3em;color:var(--acc);vertical-align:top;margin-left:.08em}
-.stat span{color:var(--mute);display:block;margin-top:12px;max-width:17em}
-@media (max-width:760px){.stats{grid-template-columns:1fr 1fr}.stat{padding:22px 14px 22px 0!important;border-right:0;border-bottom:1px solid var(--line)}}
+/* bento */
+.bento{display:grid;grid-template-columns:repeat(12,1fr);gap:14px}
+.b-about{grid-column:span 5}.b-term{grid-column:span 4}.b-stats{grid-column:span 3;display:grid;gap:14px}
+.b-cap{grid-column:span 3}.b-certs{grid-column:span 12;padding:0}
+.b-about p{color:var(--mute);font-size:16.5px;margin-bottom:14px}
+.b-about p b{color:var(--ink);font-weight:500}
+.b-about .big{font-family:var(--disp);font-weight:300;font-size:clamp(19px,1.9vw,26px);line-height:1.3;color:var(--ink);letter-spacing:-.02em;margin-bottom:18px}
+.tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:6px}
+.tag{font-family:var(--mono);font-size:11px;padding:5px 10px;border-radius:8px;border:1px solid var(--line);color:var(--mute);background:rgba(255,255,255,.02)}
+.term{font-family:var(--mono);font-size:12.5px;line-height:1.9;white-space:pre-wrap;color:var(--mute);min-height:250px}
+.term .p{color:var(--ok)}.term .k{color:var(--c2)}.term .s{color:var(--c1)}.term .w{color:var(--ink)}
+.dots{display:flex;gap:6px}.dots i{width:9px;height:9px;border-radius:50%;background:var(--line2)}
+.stat{display:flex;flex-direction:column;justify-content:center}.stat b{display:block;font-family:var(--disp);font-weight:300;font-size:clamp(40px,4.4vw,62px);line-height:1}
+.stat span{color:var(--mute);display:block;margin-top:10px}
+.b-cap .ic{width:44px;height:44px;border-radius:12px;border:1px solid var(--line2);display:grid;place-items:center;margin-bottom:18px;background:rgba(255,255,255,.03)}
+.b-cap .ic svg{width:21px;height:21px;fill:none;stroke-width:1.6}
+.b-cap h3{font-family:var(--disp);font-weight:400;font-size:16px;letter-spacing:-.01em;margin-bottom:8px}
+.b-cap p{color:var(--mute);font-size:14.5px;line-height:1.55}
+.certs{display:grid;grid-template-columns:repeat(6,1fr)}
+.cert{padding:22px 20px;border-right:1px solid var(--line);position:relative;transition:background .3s}
+.cert:last-child{border:0}.cert:hover{background:rgba(255,255,255,.03)}
+.cert .i{color:var(--mute);display:flex;justify-content:space-between}
+.cert .c{font-family:var(--disp);font-weight:400;font-size:clamp(17px,1.7vw,23px);margin:14px 0 4px;letter-spacing:-.02em}
+.cert .n{color:var(--mute);font-size:13px;line-height:1.4}
+.cert.x{background:linear-gradient(160deg,rgba(94,242,255,.12),rgba(143,123,255,.12))}
+.cert.x .c{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.cert.x .i span:first-child{color:var(--c1)}
+@media (max-width:1080px){.b-about{grid-column:span 12}.b-term{grid-column:span 7}.b-stats{grid-column:span 5}.b-cap{grid-column:span 6}.certs{grid-template-columns:repeat(3,1fr)}.cert:nth-child(3){border-right:0}.cert:nth-child(-n+3){border-bottom:1px solid var(--line)}}
+@media (max-width:680px){.b-term,.b-stats,.b-cap{grid-column:span 12}.b-stats{grid-template-columns:1fr 1fr}.certs{grid-template-columns:1fr 1fr}.cert{border-bottom:1px solid var(--line)}.cert:nth-child(3){border-right:1px solid var(--line)}.cert:nth-child(even){border-right:0}}
 
-/* process: horizontal pinned scroll */
-#proc{margin-top:clamp(90px,13vw,190px)}
-.pin{position:sticky;top:0;height:100vh;overflow:hidden;display:flex;flex-direction:column;padding-bottom:32px}
-.pin-head{padding:92px var(--pad) 0;display:flex;justify-content:space-between;align-items:flex-end;gap:30px;flex-wrap:wrap}
-.pin-head h2{font-size:clamp(40px,5.4vw,92px)}
-.runner{color:var(--mute);display:flex;flex-direction:column;gap:10px;min-width:min(340px,100%)}
-.runner .row{display:flex;justify-content:space-between;gap:20px}
-.runner .st{color:var(--warn);display:flex;gap:8px;align-items:center}
-.runner .st::before{content:"";width:7px;height:7px;border-radius:50%;background:currentColor}
-.runner .st.ok{color:var(--acc)}
-.bar{height:2px;background:var(--line);position:relative}
-.bar i{position:absolute;inset:0;background:var(--acc);transform-origin:left;transform:scaleX(0)}
-.track{flex:1;display:flex;align-items:stretch;gap:0;padding-left:var(--pad);will-change:transform;margin-top:34px}
-.stage{flex:none;width:min(520px,78vw);border-left:1px solid var(--line);padding:26px 34px 34px;display:flex;flex-direction:column;position:relative;transition:background .5s}
-.stage .no{font-family:var(--serif);font-size:clamp(90px,13vh,170px);line-height:.8;letter-spacing:-.04em;color:transparent;-webkit-text-stroke:1px var(--dim);transition:color .5s,-webkit-text-stroke-color .5s}
-.stage h3{font-family:var(--serif);font-weight:400;font-size:clamp(40px,6vh,68px);line-height:1;margin-top:auto;letter-spacing:-.02em}
-.stage p{color:var(--mute);margin-top:12px;max-width:26em}
-.stage .tools{margin-top:22px;color:var(--dim);display:flex;justify-content:space-between;gap:10px;border-top:1px solid var(--line);padding-top:14px}
-.stage .chk{color:var(--dim)}
-.stage.on{background:linear-gradient(180deg,rgba(200,255,77,.05),transparent 60%)}
-.stage.on .no{color:var(--acc);-webkit-text-stroke-color:var(--acc)}
-.stage.on .chk{color:var(--acc)}
-.stage.end{width:min(640px,86vw);justify-content:center;border-right:1px solid var(--line)}
-.stage.end h3{margin:0;font-size:clamp(48px,8vh,104px)}
-@media (max-width:900px){.pin{position:static;height:auto;overflow:visible}.pin-head{padding-top:0}.track{flex-direction:column;padding:0 var(--pad);transform:none!important}.stage{width:auto;border-left:0;border-top:1px solid var(--line);padding:26px 0}.stage h3{margin-top:18px}.stage .no{font-size:84px}.stage.end{width:auto;border-right:0}}
-
-/* capabilities rows */
-.rows{border-top:1px solid var(--line)}
-.rowx{position:relative;display:grid;grid-template-columns:90px 1.1fr 1.4fr auto;gap:24px;align-items:center;padding:clamp(24px,3.4vw,46px) 0;border-bottom:1px solid var(--line);isolation:isolate;transition:color .45s var(--ease),padding .5s var(--ease)}
-.rowx::before{content:"";position:absolute;inset:0 calc(var(--pad) * -1);background:var(--acc);transform:scaleY(0);transform-origin:bottom;transition:transform .5s var(--ease);z-index:-1}
-.rowx:hover{color:var(--bg);padding-inline:14px}
-.rowx:hover::before{transform:scaleY(1)}
-.rowx .n{color:var(--mute);transition:color .3s}
-.rowx h3{font-family:var(--serif);font-weight:400;font-size:clamp(32px,4.3vw,70px);line-height:1;letter-spacing:-.02em}
-.rowx p{color:var(--mute);transition:color .3s;max-width:34em}
-.rowx .tl{color:var(--mute);text-align:right;line-height:1.9;transition:color .3s}
-.rowx:hover .n,.rowx:hover p,.rowx:hover .tl{color:rgba(11,11,12,.72)}
-@media (max-width:900px){.rowx{grid-template-columns:44px 1fr;row-gap:10px}.rowx p,.rowx .tl{grid-column:2;text-align:left}}
+/* pipeline */
+.pipe{padding:28px 30px}
+.ptop{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;color:var(--mute);margin-bottom:34px}
+.ptop .cmd b{color:var(--ok);font-weight:400}.ptop .cmd i{font-style:normal;color:var(--ink)}
+.pst{color:var(--warn);display:flex;gap:8px;align-items:center}.pst.ok{color:var(--ok)}
+.rail{position:relative;display:grid;grid-template-columns:repeat(6,1fr)}
+.rail::before{content:"";position:absolute;left:8.33%;right:8.33%;top:27px;height:1px;background:repeating-linear-gradient(90deg,var(--line2) 0 5px,transparent 5px 11px)}
+.fill{position:absolute;left:8.33%;top:26px;height:3px;width:0;border-radius:3px;background:var(--grad);box-shadow:0 0 16px var(--c1);transition:width 1s var(--ease)}
+.stg{text-align:center;position:relative}
+.stg .n{width:56px;height:56px;margin:0 auto;border-radius:16px;border:1px solid var(--line2);background:#080a12;display:grid;place-items:center;color:var(--dim);position:relative;transition:all .4s;transform:rotate(45deg)}
+.stg .n span{transform:rotate(-45deg);font-family:var(--mono);font-size:12px}
+.stg.run .n{border-color:var(--warn);color:var(--warn);box-shadow:0 0 0 6px rgba(255,194,77,.08)}
+.stg.done .n{border-color:var(--c1);color:var(--c1);box-shadow:0 0 26px -4px rgba(94,242,255,.7),inset 0 0 14px rgba(94,242,255,.15)}
+.stg h4{font-family:var(--disp);font-weight:400;font-size:14px;margin-top:22px}
+.stg p{font-family:var(--mono);font-size:11px;color:var(--dim);margin-top:5px}
+.plog{margin-top:26px;padding-top:16px;border-top:1px solid var(--line);font-family:var(--mono);font-size:12px;color:var(--mute);height:46px;overflow:hidden;white-space:nowrap}
+.plog b{color:var(--ok);font-weight:400}
+@media (max-width:760px){.rail{grid-template-columns:repeat(3,1fr);row-gap:30px}.rail::before,.fill{display:none}}
 
 /* work */
-.flag{display:grid;grid-template-columns:1.05fr .95fr;border:1px solid var(--line);margin-top:10px}
-.flag-l{padding:clamp(26px,3.6vw,56px);display:flex;flex-direction:column}
-.flag-l .k{color:var(--acc);display:flex;justify-content:space-between}
-.flag-l h3{font-family:var(--serif);font-weight:400;font-size:clamp(40px,5vw,84px);line-height:.95;letter-spacing:-.025em;margin:26px 0 20px}
-.flag-l p{color:var(--mute);font-size:17px;max-width:32em}
-.flag-l ul{list-style:none;margin:26px 0 34px;border-top:1px solid var(--line)}
-.flag-l li{padding:12px 0;border-bottom:1px solid var(--line);color:var(--mute);display:flex;gap:16px;font-size:15px}
-.flag-l li span:first-child{color:var(--dim);flex:none;width:74px;padding-top:2px}
-.flag-r{border-left:1px solid var(--line);background:var(--bg2);position:relative;overflow:hidden;min-height:420px}
-.flag-r svg{position:absolute;inset:0;width:100%;height:100%}
-.projs{border-bottom:1px solid var(--line);margin-top:clamp(40px,6vw,80px)}
-.proj{display:grid;grid-template-columns:70px 1.3fr 1.2fr 110px 30px;gap:24px;align-items:center;padding:clamp(22px,2.8vw,38px) 0;border-top:1px solid var(--line);transition:padding .5s var(--ease),opacity .3s}
-.projs:hover .proj{opacity:.35}.projs .proj:hover{opacity:1;padding-inline:14px}
-.proj .n,.proj .y{color:var(--mute)}
-.proj h3{font-family:var(--serif);font-weight:400;font-size:clamp(28px,3.6vw,58px);line-height:1;letter-spacing:-.02em;transition:color .3s}
-.proj:hover h3{color:var(--acc);font-style:italic}
-.proj p{color:var(--mute);font-size:15px}
-.proj svg{width:22px;height:22px;transition:transform .5s var(--ease)}
-.proj:hover svg{transform:translate(4px,-4px);color:var(--acc)}
-@media (max-width:900px){.flag{grid-template-columns:1fr}.flag-r{border-left:0;border-top:1px solid var(--line);min-height:340px}.proj{grid-template-columns:36px 1fr 24px;row-gap:8px}.proj p{grid-column:2}.proj .y{display:none}}
-
-/* certs */
-.certs{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)}
-.cert{border-right:1px solid var(--line);border-bottom:1px solid var(--line);padding:26px 26px 30px;min-height:270px;display:flex;flex-direction:column;position:relative;overflow:hidden;transition:background .4s}
-.cert::before{content:"";position:absolute;width:380px;height:380px;left:var(--x,50%);top:var(--y,50%);transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(200,255,77,.13),transparent 62%);opacity:0;transition:opacity .4s;pointer-events:none}
-.cert:hover::before{opacity:1}
-.cert .top{display:flex;justify-content:space-between;color:var(--mute)}
-.cert .code{font-family:var(--serif);font-size:clamp(46px,5.4vw,88px);line-height:.9;letter-spacing:-.03em;margin-top:auto}
-.cert .nm{color:var(--mute);margin-top:10px}
-.cert.x{background:var(--acc);color:var(--bg)}
-.cert.x .top,.cert.x .nm{color:rgba(11,11,12,.7)}
-.cert.x::before{display:none}
-.cert .star{display:inline-block;animation:spin 9s linear infinite}
-@keyframes spin{to{transform:rotate(360deg)}}
-@media (max-width:900px){.certs{grid-template-columns:1fr 1fr}.cert{min-height:210px;padding:18px}}
-@media (max-width:520px){.certs{grid-template-columns:1fr}}
+.work{display:grid;grid-template-columns:1.25fr 1fr;gap:14px}
+.flag{display:grid;grid-template-columns:1fr 240px;gap:20px;padding:30px}
+.flag h3{font-family:var(--disp);font-weight:400;font-size:clamp(20px,2.2vw,30px);line-height:1.15;letter-spacing:-.02em;margin:14px 0 12px}
+.flag p{color:var(--mute);font-size:15.5px}
+.flag ul{list-style:none;margin:16px 0 22px}
+.flag li{display:flex;gap:14px;padding:8px 0;border-top:1px solid var(--line);color:var(--mute);font-size:14px}
+.flag li span:first-child{color:var(--c1);width:62px;flex:none;padding-top:2px}
+.flag .dia{align-self:center}
+.side{display:grid;gap:14px}
+.proj{display:flex;flex-direction:column;justify-content:center;padding:20px 22px}
+.proj .top{display:flex;justify-content:space-between;color:var(--mute);margin-bottom:8px}
+.proj h3{font-family:var(--disp);font-weight:400;font-size:16px;letter-spacing:-.01em;margin-bottom:6px;transition:color .3s}
+.proj p{color:var(--mute);font-size:14px;line-height:1.5}
+.proj svg{width:16px;height:16px;transition:transform .4s var(--ease),color .3s}
+.proj:hover svg{transform:translate(3px,-3px);color:var(--c1)}.proj:hover h3{color:var(--c1)}
+@media (max-width:1000px){.work{grid-template-columns:1fr}}
+@media (max-width:620px){.flag{grid-template-columns:1fr}.flag .dia{max-width:240px;margin-inline:auto}}
 
 /* experience */
-.exp{display:grid;grid-template-columns:.8fr 1.6fr;gap:clamp(30px,6vw,110px)}
-.exp-l{position:sticky;top:110px;align-self:start}
-.exp-l p{color:var(--mute);margin-top:22px;max-width:22em}
-.job{display:grid;grid-template-columns:150px 1fr;gap:24px;padding:34px 0;border-top:1px solid var(--line)}
-.job:last-child{border-bottom:1px solid var(--line)}
-.job .when{color:var(--mute);line-height:1.8;padding-top:10px}
-.job .when .now{color:var(--acc);display:flex;gap:8px;align-items:center}
-.job h3{font-family:var(--serif);font-weight:400;font-size:clamp(30px,3.3vw,52px);line-height:1;letter-spacing:-.02em}
-.job .co{color:var(--mute);margin-top:8px}
-.job ul{list-style:none;margin-top:18px}
-.job li{color:var(--mute);padding:5px 0 5px 22px;position:relative;font-size:15.5px}
-.job li::before{content:"";position:absolute;left:0;top:15px;width:10px;height:1px;background:var(--acc)}
-@media (max-width:900px){.exp{grid-template-columns:1fr}.exp-l{position:static}.job{grid-template-columns:1fr;gap:6px}}
+.xp{padding:0;display:grid;grid-template-columns:300px 1fr}
+.tabs{border-right:1px solid var(--line);display:flex;flex-direction:column}
+.tab{text-align:left;padding:20px 24px;border-bottom:1px solid var(--line);position:relative;transition:background .3s;color:var(--mute)}
+.tab:last-child{border-bottom:0}
+.tab b{display:block;font-family:var(--disp);font-weight:400;font-size:14px;color:var(--ink);margin-top:5px}
+.tab::before{content:"";position:absolute;left:0;top:0;bottom:0;width:2px;background:var(--grad);transform:scaleY(0);transition:transform .4s var(--ease)}
+.tab b{text-transform:none;letter-spacing:-.01em}.tab.on{background:rgba(255,255,255,.04)}.tab.on::before{transform:scaleY(1)}
+.tab .now{color:var(--ok)}
+.pane{padding:30px 34px;min-height:330px}
+.pane h3{font-family:var(--disp);font-weight:400;font-size:clamp(20px,2.2vw,28px);letter-spacing:-.02em}
+.pane .co{color:var(--c1);margin:8px 0 18px}
+.pane ul{list-style:none}
+.pane li{color:var(--mute);padding:8px 0 8px 24px;position:relative;border-top:1px solid var(--line);opacity:0;transform:translateX(-10px);animation:lin .5s var(--ease) forwards}
+.pane li::before{content:"";position:absolute;left:2px;top:17px;width:8px;height:8px;border:1px solid var(--c1);transform:rotate(45deg)}
+@keyframes lin{to{opacity:1;transform:none}}
+@media (max-width:820px){.xp{grid-template-columns:1fr}.tabs{flex-direction:row;overflow-x:auto;border-right:0;border-bottom:1px solid var(--line)}.tab{flex:none;border-bottom:0;border-right:1px solid var(--line);padding:14px 18px}.tab::before{top:auto;right:0;bottom:0;width:auto;height:2px;transform:scaleX(0)}.tab.on::before{transform:scaleX(1)}.pane{padding:22px}}
 
 /* contact */
-.contact{padding:clamp(100px,14vw,210px) var(--pad) clamp(50px,7vw,90px);text-align:left;position:relative}
-.contact h2{font-size:clamp(60px,14vw,250px);line-height:.84;margin-left:-.04em}
-.contact .rowc{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;flex-wrap:wrap;margin-top:clamp(40px,6vw,80px)}
-.round{width:clamp(150px,15vw,210px);aspect-ratio:1;border-radius:50%;background:var(--acc);color:var(--bg);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;font-weight:500;font-size:17px;will-change:transform;transition:transform .5s var(--ease)}
-.round svg{width:22px;height:22px}
-.clinks{display:flex;gap:clamp(18px,3vw,44px);flex-wrap:wrap}
-.clinks a{font-family:var(--serif);font-size:clamp(26px,2.8vw,44px);position:relative}
-.clinks a::after{content:"";position:absolute;left:0;right:0;bottom:2px;height:1px;background:currentColor;transform:scaleX(0);transform-origin:right;transition:transform .5s var(--ease)}
-.clinks a:hover::after{transform:scaleX(1);transform-origin:left}
-.mail{color:var(--mute);margin-top:18px;display:inline-flex;gap:12px;border-bottom:1px dashed var(--line2);padding-bottom:4px}
-.mail:hover{color:var(--ink)}
-footer{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;padding:22px var(--pad) 26px;border-top:1px solid var(--line);color:var(--mute)}
+.contact{text-align:center;padding:clamp(50px,7vw,90px) 26px;margin-top:clamp(70px,9vw,120px)}
+.contact h2{font-size:clamp(30px,5.4vw,76px)}
+.contact p{color:var(--mute);margin:16px auto 28px;max-width:440px}
+.contact .cta{justify-content:center}
+.mail{color:var(--mute);margin-top:24px;display:inline-flex;gap:12px;border:1px dashed var(--line2);border-radius:10px;padding:9px 14px}
+.mail:hover{color:var(--ink);border-color:var(--c1)}.mail span:last-child{color:var(--c1)}
+footer{text-align:center;color:var(--dim);padding:34px var(--pad) 24px}
 
 /* status bar */
-#sb{position:fixed;left:0;right:0;bottom:0;height:32px;z-index:70;background:rgba(11,11,12,.86);backdrop-filter:blur(10px);border-top:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 14px;color:var(--mute);gap:14px;white-space:nowrap}
+#sb{position:fixed;left:0;right:0;bottom:0;height:32px;z-index:70;background:rgba(4,5,10,.82);backdrop-filter:blur(12px);border-top:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 14px;color:var(--mute);gap:14px;white-space:nowrap}
 #sb>div{display:flex;gap:18px;align-items:center}
-#sb .ok{color:var(--acc);display:flex;gap:8px;align-items:center}
+#sb .ok{color:var(--ok);display:flex;gap:8px;align-items:center}
 #sb button{color:var(--ink);border:1px solid var(--line2);border-radius:5px;padding:2px 7px}
-#sb button:hover{background:var(--acc);color:var(--bg);border-color:var(--acc)}
-@media (max-width:760px){#sb .hide,#sb button{display:none}.portrait .cap{display:none}}
+#sb button:hover{border-color:var(--c1);color:var(--c1)}
+#prog{position:fixed;left:0;bottom:32px;height:1px;width:0;background:var(--grad);z-index:71;box-shadow:0 0 10px var(--c1)}
+@media (max-width:760px){#sb .hide,#sb button{display:none}}
 
 /* palette */
-.pal-bg{position:fixed;inset:0;background:rgba(5,5,6,.66);backdrop-filter:blur(8px);z-index:150;display:none;align-items:flex-start;justify-content:center;padding-top:15vh}
+.pal-bg{position:fixed;inset:0;background:rgba(2,3,6,.66);backdrop-filter:blur(8px);z-index:150;display:none;align-items:flex-start;justify-content:center;padding-top:15vh}
 .pal-bg.open{display:flex}
-.pal{width:min(580px,92vw);background:var(--bg2);border:1px solid var(--line2);box-shadow:0 50px 120px -20px #000;animation:pop .25s var(--ease)}
-@keyframes pop{from{transform:translateY(12px);opacity:0}}
-.pal input{width:100%;background:none;border:0;border-bottom:1px solid var(--line);padding:20px 22px;color:var(--ink);font-family:var(--serif);font-size:26px;outline:none}
-.pal input::placeholder{color:var(--dim)}
-.pal ul{list-style:none;max-height:330px;overflow:auto}
-.pal li{display:flex;justify-content:space-between;align-items:center;padding:13px 22px;cursor:pointer;color:var(--mute);border-bottom:1px solid var(--line)}
-.pal li.act{background:var(--acc);color:var(--bg)}
-.toast{position:fixed;bottom:50px;left:50%;transform:translate(-50%,20px);background:var(--acc);color:var(--bg);padding:10px 18px;opacity:0;transition:.4s var(--ease);z-index:160;pointer-events:none}
+.pal{width:min(540px,92vw);background:#0a0c14;border:1px solid var(--line2);border-radius:16px;overflow:hidden;box-shadow:0 50px 120px -20px #000,0 0 60px -20px rgba(94,242,255,.3)}
+.pal input{width:100%;background:none;border:0;border-bottom:1px solid var(--line);padding:18px 20px;color:var(--ink);font-family:var(--mono);font-size:15px;outline:none}
+.pal ul{list-style:none;max-height:320px;overflow:auto;padding:8px}
+.pal li{display:flex;justify-content:space-between;padding:11px 14px;border-radius:10px;cursor:pointer;color:var(--mute)}
+.pal li.act{background:rgba(94,242,255,.1);color:var(--ink)}
+.toast{position:fixed;bottom:50px;left:50%;transform:translate(-50%,20px);background:#0a0c14;border:1px solid var(--ok);color:var(--ok);border-radius:10px;padding:10px 18px;opacity:0;transition:.4s var(--ease);z-index:160;pointer-events:none}
 .toast.show{opacity:1;transform:translate(-50%,0)}
 
-@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.ln>span,.fx{transform:none;opacity:1}.portrait{clip-path:none}.state .w{opacity:1}#loader{display:none}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.fx{opacity:1;transform:none}#loader{display:none}.pane li{opacity:1;transform:none}}
 </style>
-<noscript><style>#loader{display:none}.ln>span,.fx{transform:none;opacity:1}.portrait{clip-path:none}.state .w{opacity:1}</style></noscript>
+<noscript><style>#loader{display:none}.fx{opacity:1;transform:none}</style></noscript>
 </head>
 <body>
-
-<div id="loader">
-  <div class="steps mono"><div>resolving dependencies</div><div>running security gates</div><div>building image</div><div>deploying to production</div></div>
-  <div class="num"><span id="ldn">0</span><sup>%</sup></div>
-</div>
-<div class="grain"></div>
-<div id="cur"><span></span></div>
+<div id="loader"><div class="box"><div class="l mono"><span id="ldt">booting</span><span id="ldn">0%</span></div><div class="bar"><i id="ldb"></i></div></div></div>
+<canvas id="space"></canvas><div class="gridbg"></div><div class="aur a"></div><div class="aur b"></div>
+<div id="cur"></div>
 
 <nav>
-  <a href="#top" class="brand">Hamouda<i>.</i></a>
-  <div class="links mono"><a href="#profile">Profile</a><a href="#proc">Process</a><a href="#skills">Capabilities</a><a href="#work">Work</a><a href="#certs">Credentials</a><a href="#career">Experience</a></div>
-  <a href="#contact" class="avail mono"><span class="pulse"></span>Open to work</a>
+  <a href="#top" class="brand">AH<span class="grad">/</span>26</a>
+  <div class="links mono"><a href="#system">System</a><a href="#ship">Pipeline</a><a href="#work">Work</a><a href="#career">Experience</a></div>
+  <a href="#contact" class="go mono"><span class="pulse"></span>Open to work</a>
 </nav>
 
 <main id="top">
-
 <!-- HERO -->
-<header class="hero" id="hero">
-  <canvas id="dots"></canvas>
-  <div class="hero-meta mono"><span>DevOps Engineer</span><span>30.04° N · 31.24° E — Cairo</span><span>Folio / 2026</span></div>
-  <div class="portrait" data-cur="hello"><img src="images/profile.jpg" alt="Abdelrahman Hamouda" id="pimg"><div class="cap mono"><span class="pulse"></span>Application Engineer @ LENSEC</div></div>
-  <h1 id="h1"><span class="ln"><span>Abdelrahman</span></span><span class="ln"><span><em>Hamouda</em></span></span></h1>
-  <div class="hero-foot">
-    <p class="fx" id="hp">I build the road to production, <b>and the guardrails along it.</b> Delivery pipelines, cloud-native platforms and security gates on Azure and AWS.</p>
-    <div class="cta fx d1" id="hc">
-      <a class="btn fill" href="#work">Selected work <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
+<header class="wrap hero" id="hero">
+  <div>
+    <div class="kick mono fx" data-h>DevOps Engineer · Cairo, EG</div>
+    <h1 class="fx d1" data-h>Abdelrahman<b class="grad">Hamouda</b></h1>
+    <div class="role fx d2" data-h>&gt; <i id="role"></i><span class="caret"></span></div>
+    <p class="lead fx d3" data-h>I build the road to production, <b>and the guardrails along it.</b> Delivery pipelines, cloud-native platforms and security gates on Azure and AWS.</p>
+    <div class="cta fx d4" data-h>
+      <a class="btn p" href="#work">Selected work <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
       <a class="btn" href="#contact">Get in touch</a>
     </div>
+    <div class="mini fx d5" data-h>
+      <div><b>AZ-400</b><span class="mono">Expert certified</span></div>
+      <div><b>2</b><span class="mono">Clouds</span></div>
+      <div><b>6</b><span class="mono">Certifications</span></div>
+    </div>
+  </div>
+  <div class="core fx d2" data-h id="core">
+    <div class="halo"></div>
+    <svg class="back" viewBox="-270 -270 540 540" fill="none"><g stroke="rgba(255,255,255,.14)"><ellipse rx="255" ry="84" transform="rotate(-18)"/><ellipse rx="222" ry="128" transform="rotate(26)" stroke-dasharray="3 7"/><circle r="262" stroke="rgba(255,255,255,.05)"/></g></svg>
+    <div class="face"><div class="in"><img src="images/portrait.jpg" alt="Abdelrahman Hamouda"></div></div>
+    <svg class="front" viewBox="-270 -270 540 540" fill="none"><g stroke="url(#rg)" stroke-width="1.2"><path d="M-255 0A255 84 0 0 0 255 0" transform="rotate(-18)"/></g><defs><linearGradient id="rg"><stop offset="0" stop-color="#5ef2ff" stop-opacity="0"/><stop offset=".5" stop-color="#5ef2ff"/><stop offset="1" stop-color="#8f7bff" stop-opacity="0"/></linearGradient></defs></svg>
+    <div class="hudt tl mono">Node<br><b>CAIRO-01</b></div>
+    <div class="hudt tr mono">Status<br><b style="color:var(--ok)">● Online</b></div>
+    <div class="hudt bl mono">Role<br><b>App Engineer @ LENSEC</b></div>
+    <div class="hudt br mono">Stack<br><b>Azure · AWS</b></div>
   </div>
 </header>
 
-<div class="band"><div class="t" id="band1"></div></div>
-
-<!-- PROFILE -->
-<section class="sec" id="profile">
-  <div class="tag mono"><i>(01)</i> Profile</div>
-  <p class="state" id="state">I make release day a <k>non-event</k>. Pipelines on Azure DevOps, platforms on <k>Kubernetes</k>, infrastructure written in Terraform, and a <k>security gate</k> at every stage, so what reaches production has already <k>earned</k> its place there.</p>
-  <div class="about">
-    <p class="fx">Right now I'm an <b>Application Engineer at LENSEC</b>. I set up our on-prem Azure DevOps Server, built the pipeline that moves releases from Test to UAT to Production, and added Fortify and SonarQube scans so security issues are caught before anything ships.</p>
-    <p class="fx d1">Before that I ran Azure and Microsoft 365 infrastructure as a Cloud Engineer, and built EKS platforms with Terraform, Helm and Argo CD. My one rule: <b>if it's not in Git, it doesn't exist.</b></p>
-    <dl class="fx d2 mono">
-      <dt>Based</dt><dd>Cairo, Egypt</dd>
-      <dt>Clouds</dt><dd>Azure · AWS</dd>
-      <dt>Top cert</dt><dd>AZ-400 Expert</dd>
-      <dt>Open to</dt><dd>KSA · UAE · Remote</dd>
-      <dt>Degree</dt><dd>B.Sc. Comm. &amp; Electrical Eng.</dd>
-    </dl>
-  </div>
-  <div class="stats">
-    <div class="stat fx"><b><span data-count="6">0</span><sup>✦</sup></b><span class="mono">certifications, one at expert level</span></div>
-    <div class="stat fx d1"><b><span data-count="30">0</span></b><span class="mono">users on the Azure DevOps Server I set up</span></div>
-    <div class="stat fx d2"><b><span data-count="3">0</span></b><span class="mono">environments: test → uat → production</span></div>
-    <div class="stat fx d3"><b><span data-count="2">0</span></b><span class="mono">clouds: azure and aws</span></div>
-  </div>
-</section>
-
-<!-- PROCESS -->
-<section id="proc">
-  <div class="pin">
-    <div class="pin-head pad" style="padding-inline:var(--pad)">
-      <div><div class="tag mono" style="margin-bottom:22px"><i>(02)</i> Process &nbsp;</div><h2>Every release <em>earns</em><br>its way to production.</h2></div>
-      <div class="runner mono">
-        <div class="row"><span>pipeline run --target prod</span><span class="st" id="pst">running</span></div>
-        <div class="bar"><i id="pbar"></i></div>
-        <div class="row"><span id="pstage">stage 01 / 06</span><span id="ppct">000%</span></div>
+<!-- SYSTEM -->
+<section class="wrap sec" id="system">
+  <div class="sh fx"><div><div class="t mono">01 — System overview</div><h2>Everything about me, <b class="grad">on one dashboard.</b></h2></div></div>
+  <div class="bento">
+    <div class="card hud b-about fx">
+      <div class="lab mono"><span>about.md</span><span>01</span></div>
+      <p class="big">I make release day a non-event.</p>
+      <p>Right now I'm an <b>Application Engineer at LENSEC</b>. I set up our on-prem <b>Azure DevOps Server</b>, built the pipeline from <b>Test to UAT to Production</b>, and added Fortify and SonarQube scans so security issues are caught before anything ships.</p>
+      <p>Before that I ran Azure and Microsoft 365 as a Cloud Engineer and built EKS platforms with Terraform, Helm and Argo CD.</p>
+      <div class="tags"><span class="tag">Cairo, Egypt</span><span class="tag">B.Sc. Comm. &amp; Electrical Eng.</span><span class="tag">Open to KSA · UAE · Remote</span></div>
+    </div>
+    <div class="card b-term fx d1">
+      <div class="lab mono"><span class="dots"><i></i><i></i><i></i></span><span>zsh</span></div>
+      <div class="term" id="term"></div>
+    </div>
+    <div class="b-stats">
+      <div class="card stat fx d2"><b class="grad" data-count="30">0</b><span class="mono">users on the Azure DevOps Server I set up</span></div>
+      <div class="card stat fx d3"><b class="grad" data-count="3">0</b><span class="mono">environments: test → uat → prod</span></div>
+    </div>
+    <div class="card b-cap fx"><div class="ic"><svg viewBox="0 0 24 24" stroke="#5ef2ff"><circle cx="5" cy="12" r="2.5"/><circle cx="19" cy="6" r="2.5"/><circle cx="19" cy="18" r="2.5"/><path d="M7.5 12h4l5-5M11.5 12l5 5"/></svg></div><h3>Delivery pipelines</h3><p>Multi-stage CI/CD on Azure DevOps, GitHub Actions and Jenkins that stays boring in production.</p></div>
+    <div class="card b-cap fx d1"><div class="ic"><svg viewBox="0 0 24 24" stroke="#8f7bff"><path d="M12 2l8.66 5v10L12 22l-8.66-5V7z"/><circle cx="12" cy="12" r="3"/></svg></div><h3>Cloud-native platforms</h3><p>EKS built with Terraform, delivered by Helm and Argo CD. Git is the source of truth.</p></div>
+    <div class="card b-cap fx d2"><div class="ic"><svg viewBox="0 0 24 24" stroke="#4dffa6"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg></div><h3>Security as a gate</h3><p>Fortify, SonarQube, Trivy and Gitleaks in the pipeline. Secrets live in Vault, never in the repo.</p></div>
+    <div class="card b-cap fx d3"><div class="ic"><svg viewBox="0 0 24 24" stroke="#ff6ad5"><path d="M3 12h4l3-7 4 14 3-7h4"/></svg></div><h3>Observability</h3><p>Prometheus and Grafana as code, plus Datadog and Azure Monitor. Alerts before users notice.</p></div>
+    <div class="card b-certs fx">
+      <div class="certs">
+        <div class="cert x"><div class="i mono"><span>Expert</span><span>'26</span></div><div class="c">AZ-400</div><div class="n">Microsoft DevOps Engineer Expert</div></div>
+        <div class="cert"><div class="i mono"><span>Microsoft</span><span>'26</span></div><div class="c">AZ-104</div><div class="n">Azure Administrator Associate</div></div>
+        <div class="cert"><div class="i mono"><span>AWS</span><span>'26</span></div><div class="c">SOA-C03</div><div class="n">CloudOps Administrator</div></div>
+        <div class="cert"><div class="i mono"><span>AWS</span><span>'25</span></div><div class="c">SAA-C03</div><div class="n">Solutions Architect</div></div>
+        <div class="cert"><div class="i mono"><span>AWS</span><span>'25</span></div><div class="c">CLF-C02</div><div class="n">Cloud Practitioner</div></div>
+        <div class="cert"><div class="i mono"><span>Oracle</span><span>'25</span></div><div class="c">OCI</div><div class="n">Foundations Associate</div></div>
       </div>
     </div>
-    <div class="track" id="track">
-      <article class="stage"><span class="no">01</span><h3>Commit</h3><p>Secret scanning on every push, so leaked keys never leave the laptop.</p><div class="tools mono"><span>git · gitleaks</span><span class="chk">✔ passed</span></div></article>
-      <article class="stage"><span class="no">02</span><h3>Build</h3><p>Reproducible container builds, versioned and pushed to the registry.</p><div class="tools mono"><span>docker · maven</span><span class="chk">✔ passed</span></div></article>
-      <article class="stage"><span class="no">03</span><h3>Scan</h3><p>Static analysis and image scanning. A failed quality gate stops the build, not production.</p><div class="tools mono"><span>sonarqube · fortify · trivy</span><span class="chk">✔ passed</span></div></article>
-      <article class="stage"><span class="no">04</span><h3>Test</h3><p>Deploy to the Test environment and run the automated checks.</p><div class="tools mono"><span>azure devops</span><span class="chk">✔ passed</span></div></article>
-      <article class="stage"><span class="no">05</span><h3>UAT</h3><p>Business sign-off behind an approval gate before anything moves on.</p><div class="tools mono"><span>approval gate</span><span class="chk">✔ approved</span></div></article>
-      <article class="stage"><span class="no">06</span><h3>Production</h3><p>GitOps sync to the cluster. A rollback is a git revert.</p><div class="tools mono"><span>argo cd · eks</span><span class="chk">✔ synced</span></div></article>
-      <article class="stage end"><div class="mono acc" style="margin-bottom:18px">exit 0</div><h3>Deployed.<br><em class="acc">Boringly.</em></h3></article>
-    </div>
   </div>
 </section>
 
-<!-- CAPABILITIES -->
-<section class="sec" id="skills">
-  <div class="tag mono"><i>(03)</i> Capabilities</div>
-  <h2 class="rv"><span class="ln"><span>Four things I do</span></span><span class="ln"><span><em>really well.</em></span></span></h2>
-  <div class="rows" style="margin-top:clamp(40px,6vw,80px)">
-    <div class="rowx"><span class="n mono">01</span><h3>Delivery pipelines</h3><p>Multi-stage, multi-environment CI/CD that stays boring in production. I built an on-prem Azure DevOps Server for 30 users and migrated its project collections.</p><span class="tl mono">Azure DevOps<br>GitHub Actions<br>Jenkins · GitLab CI</span></div>
-    <div class="rowx"><span class="n mono">02</span><h3>Cloud-native platforms</h3><p>EKS clusters provisioned with Terraform and delivered through Helm and Argo CD. Git is the source of truth, and IRSA keeps permissions minimal.</p><span class="tl mono">AWS EKS · Terraform<br>Helm · Argo CD<br>OpenShift</span></div>
-    <div class="rowx"><span class="n mono">03</span><h3>Security as a gate</h3><p>Static analysis, image scanning and secret detection built into the pipeline. Secrets live in Vault, never in the repo.</p><span class="tl mono">Fortify · SonarQube<br>Trivy · Gitleaks<br>Vault</span></div>
-    <div class="rowx"><span class="n mono">04</span><h3>Observability</h3><p>Metrics, dashboards and alerts that fire before users notice. Prometheus and Grafana as code, plus Datadog and Azure Monitor.</p><span class="tl mono">Prometheus · Grafana<br>Datadog<br>Azure Monitor</span></div>
+<!-- PIPELINE -->
+<section class="wrap sec" id="ship">
+  <div class="sh fx"><div><div class="t mono">02 — How I ship</div><h2>Every release <b class="grad">earns its way</b> to production.</h2></div><p>Security and quality gates at every stage. Nothing skips the line.</p></div>
+  <div class="card hud pipe fx" id="pipe">
+    <div class="ptop mono"><span class="cmd"><b>❯</b> <i>pipeline run</i> --target prod --gates strict</span><span class="pst" id="pst"><span class="pulse"></span><span id="ptxt">running</span></span></div>
+    <div class="rail" id="rail"><div class="fill" id="fill"></div></div>
+    <div class="plog" id="plog"></div>
   </div>
 </section>
 
 <!-- WORK -->
-<section class="sec" id="work">
-  <div class="tag mono"><i>(04)</i> Selected work</div>
-  <h2 class="rv"><span class="ln"><span>Built end to end,</span></span><span class="ln"><span><em>not just configured.</em></span></span></h2>
-  <div class="flag fx" style="margin-top:clamp(40px,6vw,80px)">
-    <div class="flag-l">
-      <div class="k mono"><span>✦ Flagship</span><span style="color:var(--mute)">Jan – Feb 2026</span></div>
-      <h3>Cloud-Native DevSecOps Platform</h3>
-      <p>A production-style platform running a microservices voting app on AWS EKS. Infrastructure, platform tooling and application delivery each have their own Azure DevOps pipeline.</p>
-      <ul>
-        <li><span class="mono">Infra</span><span>VPC, IAM, EKS, IRSA, API Gateway and Cognito, provisioned with Terraform</span></li>
-        <li><span class="mono">Deliver</span><span>Helm charts deployed by Argo CD in a GitOps workflow</span></li>
-        <li><span class="mono">Secure</span><span>Vault and External Secrets, with SonarQube, Trivy and Gitleaks gates</span></li>
-        <li><span class="mono">Observe</span><span>Datadog monitoring across the cluster</span></li>
-      </ul>
-      <div><a class="btn" href="https://github.com/3bdo7amouda/cloud-native-devops-platform" target="_blank" rel="noopener" data-cur="open">View repository <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M8 7h9v9"/></svg></a></div>
-    </div>
-    <div class="flag-r">
-      <svg viewBox="0 0 520 520" preserveAspectRatio="xMidYMid meet" fill="none" font-family="JetBrains Mono, monospace" font-size="10" letter-spacing="1">
-        <defs><pattern id="g" width="26" height="26" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="1" fill="#ece8df" opacity=".1"/></pattern></defs>
-        <rect width="520" height="520" fill="url(#g)"/>
-        <g stroke="#ece8df" stroke-opacity=".28">
-          <rect x="60" y="56" width="400" height="408" rx="4" stroke-dasharray="4 6"/>
-          <rect x="96" y="150" width="328" height="210" rx="4"/>
-          <path id="p1" d="M260 96V150"/><path id="p2" d="M150 255H222"/><path id="p3" d="M298 255H370"/><path id="p4" d="M260 360V414"/>
-        </g>
-        <text x="72" y="78" fill="#8d897f">AWS · VPC</text><text x="108" y="172" fill="#8d897f">EKS CLUSTER</text>
-        <g fill="#0b0b0c" stroke="#ece8df" stroke-opacity=".5">
-          <rect x="196" y="72" width="128" height="34" rx="17"/><rect x="108" y="230" width="84" height="50" rx="4"/><rect x="328" y="230" width="84" height="50" rx="4"/><rect x="196" y="404" width="128" height="34" rx="17"/>
-        </g>
-        <polygon points="260,213 296,234 296,276 260,297 224,276 224,234" fill="#c8ff4d"/>
-        <text x="260" y="259" text-anchor="middle" fill="#0b0b0c" font-size="11">ARGO</text>
-        <text x="260" y="93" text-anchor="middle" fill="#ece8df">AZURE DEVOPS</text>
-        <text x="150" y="259" text-anchor="middle" fill="#ece8df">VAULT</text>
-        <text x="370" y="259" text-anchor="middle" fill="#ece8df">APPS</text>
-        <text x="260" y="425" text-anchor="middle" fill="#ece8df">DATADOG</text>
-        <text x="260" y="330" text-anchor="middle" fill="#8d897f">HELM · GITOPS SYNC</text>
-        <g fill="#c8ff4d">
-          <circle r="3.5"><animateMotion dur="2.4s" repeatCount="indefinite" path="M260 106V213"/></circle>
-          <circle r="3.5"><animateMotion dur="2.4s" begin=".8s" repeatCount="indefinite" path="M192 255H224"/></circle>
-          <circle r="3.5"><animateMotion dur="2.4s" begin="1.2s" repeatCount="indefinite" path="M296 255H328"/></circle>
-          <circle r="3.5"><animateMotion dur="2.4s" begin="1.6s" repeatCount="indefinite" path="M260 297V404"/></circle>
-        </g>
-        <circle cx="260" cy="255" r="58" stroke="#c8ff4d" stroke-opacity=".5"><animate attributeName="r" values="44;78" dur="2.4s" repeatCount="indefinite"/><animate attributeName="stroke-opacity" values=".6;0" dur="2.4s" repeatCount="indefinite"/></circle>
+<section class="wrap sec" id="work">
+  <div class="sh fx"><div><div class="t mono">03 — Selected work</div><h2>Built end to end, <b class="grad">not just configured.</b></h2></div></div>
+  <div class="work">
+    <div class="card hud flag fx">
+      <div>
+        <div class="mono" style="color:var(--c1)">✦ Flagship · Jan – Feb 2026</div>
+        <h3>Cloud-Native DevSecOps Platform</h3>
+        <p>A production-style platform running a microservices voting app on AWS EKS, with separate Azure DevOps pipelines for infrastructure, platform tooling and application delivery.</p>
+        <ul>
+          <li><span class="mono">Infra</span><span>VPC, IAM, EKS, IRSA, API Gateway and Cognito with Terraform</span></li>
+          <li><span class="mono">Deliver</span><span>Helm charts deployed by Argo CD (GitOps)</span></li>
+          <li><span class="mono">Secure</span><span>Vault, External Secrets, SonarQube, Trivy, Gitleaks</span></li>
+          <li><span class="mono">Observe</span><span>Datadog</span></li>
+        </ul>
+        <a class="btn" href="https://github.com/3bdo7amouda/cloud-native-devops-platform" target="_blank" rel="noopener">View repository <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
+      </div>
+      <svg class="dia" viewBox="0 0 240 360" fill="none" font-family="JetBrains Mono, monospace" font-size="9" letter-spacing="1">
+        <g stroke="rgba(255,255,255,.22)"><path d="M120 46V108M120 252V314M58 180H84M156 180H182"/><rect x="14" y="100" width="212" height="160" rx="10" stroke-dasharray="3 5"/></g>
+        <g fill="#080a12" stroke="rgba(255,255,255,.4)"><rect x="60" y="14" width="120" height="32" rx="16"/><rect x="60" y="314" width="120" height="32" rx="16"/><rect x="24" y="160" width="46" height="40" rx="6"/><rect x="170" y="160" width="46" height="40" rx="6"/></g>
+        <polygon points="120,138 156,159 156,201 120,222 84,201 84,159" fill="url(#hg)"/>
+        <defs><linearGradient id="hg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#5ef2ff"/><stop offset="1" stop-color="#8f7bff"/></linearGradient></defs>
+        <text x="120" y="34" text-anchor="middle" fill="#e9edf6">AZURE DEVOPS</text><text x="120" y="334" text-anchor="middle" fill="#e9edf6">DATADOG</text>
+        <text x="47" y="184" text-anchor="middle" fill="#e9edf6" font-size="8">VAULT</text><text x="193" y="184" text-anchor="middle" fill="#e9edf6" font-size="8">APPS</text>
+        <text x="120" y="184" text-anchor="middle" fill="#04050a" font-size="10">ARGO</text><text x="24" y="120" fill="#8089a0" font-size="8">EKS</text>
+        <g fill="#5ef2ff"><circle r="3"><animateMotion dur="2.2s" repeatCount="indefinite" path="M120 46V138"/></circle><circle r="3"><animateMotion dur="2.2s" begin="1.1s" repeatCount="indefinite" path="M120 222V314"/></circle><circle r="2.5"><animateMotion dur="2.2s" begin=".6s" repeatCount="indefinite" path="M70 180H84"/></circle><circle r="2.5"><animateMotion dur="2.2s" begin=".9s" repeatCount="indefinite" path="M156 180H170"/></circle></g>
+        <circle cx="120" cy="180" r="48" stroke="#5ef2ff"><animate attributeName="r" values="42;74" dur="2.2s" repeatCount="indefinite"/><animate attributeName="stroke-opacity" values=".6;0" dur="2.2s" repeatCount="indefinite"/></circle>
       </svg>
     </div>
-  </div>
-  <div class="projs">
-    <a class="proj" href="https://github.com/3bdo7amouda?tab=repositories" target="_blank" rel="noopener" data-cur="open"><span class="n mono">02</span><h3>Ultimate CI/CD Blueprint</h3><p>Commit-to-cluster delivery across multiple environments, with Jenkins, Nexus, Argo CD, Terraform and Ansible.</p><span class="y mono">2025</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
-    <a class="proj" href="https://github.com/3bdo7amouda?tab=repositories" target="_blank" rel="noopener" data-cur="open"><span class="n mono">03</span><h3>Jenkins → GitOps</h3><p>Spring Boot builds analysed by SonarQube, containerised, and synced to Kubernetes by Argo CD.</p><span class="y mono">2025</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
-    <a class="proj" href="https://github.com/3bdo7amouda/monitoring-stack" target="_blank" rel="noopener" data-cur="open"><span class="n mono">04</span><h3>Monitoring Stack as Code</h3><p>One Ansible run deploys Prometheus, Grafana and Alertmanager across a fleet of Linux servers.</p><span class="y mono">2025</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
-  </div>
-</section>
-
-<!-- CERTS -->
-<section class="sec" id="certs">
-  <div class="tag mono"><i>(05)</i> Credentials</div>
-  <h2 class="rv"><span class="ln"><span>Six certifications.</span></span><span class="ln"><span><em>One of them Expert.</em></span></span></h2>
-  <div class="certs fx" style="margin-top:clamp(40px,6vw,80px)">
-    <div class="cert x"><div class="top mono"><span>Microsoft</span><span>Oct 2026</span></div><div class="code">AZ-400 <span class="star">✦</span></div><div class="nm mono">DevOps Engineer Expert</div></div>
-    <div class="cert"><div class="top mono"><span>Microsoft</span><span>Nov 2026</span></div><div class="code">AZ-104</div><div class="nm mono">Azure Administrator Associate</div></div>
-    <div class="cert"><div class="top mono"><span>AWS</span><span>Apr 2026</span></div><div class="code">SOA-C03</div><div class="nm mono">CloudOps Administrator, Associate</div></div>
-    <div class="cert"><div class="top mono"><span>AWS</span><span>Oct 2025</span></div><div class="code">SAA-C03</div><div class="nm mono">Solutions Architect, Associate</div></div>
-    <div class="cert"><div class="top mono"><span>AWS</span><span>May 2025</span></div><div class="code">CLF-C02</div><div class="nm mono">Cloud Practitioner</div></div>
-    <div class="cert"><div class="top mono"><span>Oracle</span><span>Feb 2025</span></div><div class="code">OCI</div><div class="nm mono">Certified Foundations Associate</div></div>
+    <div class="side">
+      <a class="card proj fx d1" href="https://github.com/3bdo7amouda?tab=repositories" target="_blank" rel="noopener"><div class="top mono"><span>02 · 2025</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M7 17L17 7M8 7h9v9"/></svg></div><h3>Ultimate CI/CD Blueprint</h3><p>Commit-to-cluster delivery with Jenkins, Nexus, Argo CD, Terraform and Ansible.</p></a>
+      <a class="card proj fx d2" href="https://github.com/3bdo7amouda?tab=repositories" target="_blank" rel="noopener"><div class="top mono"><span>03 · 2025</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M7 17L17 7M8 7h9v9"/></svg></div><h3>Jenkins → GitOps</h3><p>Spring Boot builds analysed by SonarQube and synced to Kubernetes by Argo CD.</p></a>
+      <a class="card proj fx d3" href="https://github.com/3bdo7amouda/monitoring-stack" target="_blank" rel="noopener"><div class="top mono"><span>04 · 2025</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M7 17L17 7M8 7h9v9"/></svg></div><h3>Monitoring Stack as Code</h3><p>One Ansible run deploys Prometheus, Grafana and Alertmanager across Linux servers.</p></a>
+    </div>
   </div>
 </section>
 
 <!-- EXPERIENCE -->
-<section class="sec" id="career">
-  <div class="tag mono"><i>(06)</i> Experience</div>
-  <div class="exp">
-    <div class="exp-l"><h2 class="rv" style="font-size:clamp(44px,6vw,104px)"><span class="ln"><span>Shipped</span></span><span class="ln"><span><em>to main.</em></span></span></h2><p class="fx">From intern to running the release pipeline in two years.</p></div>
-    <div>
-      <div class="job fx"><div class="when mono"><span class="now"><span class="pulse"></span>Now</span>Jun 2026 →<br>Remote</div><div><h3>Application Engineer</h3><div class="co mono">LENSEC</div><ul><li>Set up an on-prem Azure DevOps Server for 30 users and migrated the existing project collections</li><li>Built the CI/CD pipeline that deploys to Test, UAT and Production</li><li>Added Fortify and SonarQube scans so security issues are caught before release</li><li>Deploy and troubleshoot microservices-based application engines across Linux environments</li></ul></div></div>
-      <div class="job fx"><div class="when mono">Nov 2025 →<br>Jun 2026<br>Hyde Park, EG</div><div><h3>Cloud Engineer</h3><div class="co mono">LEVANTAR</div><ul><li>Ran Azure, Microsoft 365 and hybrid cloud infrastructure</li><li>Set up and enforced Entra ID identity and access policies</li><li>Shipped web apps to App Service and VMs with GitHub Actions</li><li>Monitored infrastructure, apps and logs with Azure Monitor and Log Analytics</li></ul></div></div>
-      <div class="job fx"><div class="when mono">Sep 2025 →<br>Feb 2026<br>Smart Village, EG</div><div><h3>DevOps Engineer Intern</h3><div class="co mono">National Telecommunication Institute</div><ul><li>Linux administration on RHEL and Ubuntu, with automation in Bash, Python and Ansible</li><li>Containerised workloads with Docker, Kubernetes and Helm, plus SAST/DAST scanning</li></ul></div></div>
-      <div class="job fx"><div class="when mono">Aug 2024 →<br>Apr 2025<br>Remote</div><div><h3>DevOps Engineer Intern</h3><div class="co mono">Digital Egypt Pioneers Initiative</div><ul><li>Provisioned cloud infrastructure with Terraform and Ansible</li><li>Deployed Prometheus and Grafana monitoring</li></ul></div></div>
-    </div>
-  </div>
+<section class="wrap sec" id="career">
+  <div class="sh fx"><div><div class="t mono">04 — Experience</div><h2>From intern to <b class="grad">owning the release pipeline.</b></h2></div></div>
+  <div class="card xp fx"><div class="tabs" id="tabs"></div><div class="pane" id="pane"></div></div>
 </section>
-
-<div style="margin-top:clamp(90px,13vw,190px)">
-<div class="band"><div class="t" id="band2"></div></div>
-<div class="band rev" style="border-top:0"><div class="t" id="band3"></div></div>
-</div>
 
 <!-- CONTACT -->
-<section class="contact" id="contact">
-  <div class="tag mono"><i>(07)</i> Contact</div>
-  <h2 class="rv"><span class="ln"><span>Let's ship</span></span><span class="ln"><span><em>something.</em></span></span></h2>
-  <div class="rowc">
-    <div>
-      <div class="clinks"><a href="https://linkedin.com/in/3bdo7amouda" target="_blank" rel="noopener">LinkedIn</a><a href="https://github.com/3bdo7amouda" target="_blank" rel="noopener">GitHub</a></div>
-      <button class="mail mono" id="copy" data-cur="copy"><span>abdelrahman.hamouda29@gmail.com</span><span class="acc">copy</span></button>
+<section class="wrap" id="contact">
+  <div class="card hud contact fx">
+    <div class="mono" style="color:var(--c1);margin-bottom:16px">05 — Contact</div>
+    <h2>Let's ship <b class="grad">something.</b></h2>
+    <p>Open to DevOps, Platform and Cloud roles in KSA, the UAE or remote.</p>
+    <div class="cta">
+      <a class="btn p" href="mailto:abdelrahman.hamouda29@gmail.com">Email me</a>
+      <a class="btn" href="https://linkedin.com/in/3bdo7amouda" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn" href="https://github.com/3bdo7amouda" target="_blank" rel="noopener">GitHub</a>
     </div>
-    <a class="round" id="round" href="mailto:abdelrahman.hamouda29@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M7 17L17 7M8 7h9v9"/></svg>Email me</a>
+    <button class="mail mono" id="copy"><span>abdelrahman.hamouda29@gmail.com</span><span>copy</span></button>
   </div>
 </section>
-<footer class="mono"><span>© <span id="yr"></span> Abdelrahman Hamouda</span><span>Open to DevOps · Platform · Cloud roles</span><a href="#top">Back to top ↑</a></footer>
 </main>
+<footer class="mono">© <span id="yr"></span> Abdelrahman Hamouda · exit 0</footer>
 
+<div id="prog"></div>
 <div id="sb" class="mono">
   <div><span class="ok"><span class="pulse"></span>all systems operational</span><span class="hide" id="sbsec">§ intro</span></div>
   <div><span class="hide">scroll <span id="sbpct">000</span>%</span><span>CAI <span id="sbtime">--:--:--</span></span><button id="palBtn" class="mono">Ctrl K</button></div>
 </div>
-<div class="pal-bg" id="pal"><div class="pal"><input id="palIn" placeholder="Where to?" autocomplete="off"><ul id="palList" class="mono"></ul></div></div>
+<div class="pal-bg" id="pal"><div class="pal"><input id="palIn" placeholder="Jump to…" autocomplete="off"><ul id="palList" class="mono"></ul></div></div>
 <div class="toast mono" id="toast">copied</div>
 
 <script>
 (function(){
-var d=document, $=function(s){return d.querySelector(s)}, $$=function(s){return [].slice.call(d.querySelectorAll(s))};
-var RM=matchMedia('(prefers-reduced-motion: reduce)').matches, FINE=matchMedia('(pointer: fine)').matches;
+var d=document,$=function(s){return d.querySelector(s)},$$=function(s){return [].slice.call(d.querySelectorAll(s))};
+var RM=matchMedia('(prefers-reduced-motion: reduce)').matches,FINE=matchMedia('(pointer: fine)').matches;
 function clamp(v,a,b){return Math.max(a,Math.min(b,v))}
 function pad3(n){n=String(Math.round(n));while(n.length<3)n='0'+n;return n}
 $('#yr').textContent=new Date().getFullYear();
 
-/* marquees */
-function band(el,words){var h=words.map(function(w){return '<span>'+w+'</span><b>✦</b>'}).join('');el.innerHTML=h+h}
-band($('#band1'),['Pipelines','Platforms','Guardrails','Kubernetes','Terraform','GitOps','DevSecOps','Observability']);
-band($('#band2'),['Azure DevOps','AWS EKS','Terraform','Argo CD','Helm','Docker','Ansible','GitHub Actions','Jenkins']);
-band($('#band3'),['Fortify','SonarQube','Trivy','Vault','Prometheus','Grafana','Datadog','Azure Monitor','OpenShift','Linux']);
-
 /* loader */
-var ld=$('#loader'), ldn=$('#ldn'), steps=$$('#loader .steps div');
-function ready(){ld.classList.add('done');d.body.classList.add('ready');$('#h1').classList.add('in');$('#hp').classList.add('in');$('#hc').classList.add('in')}
-if(RM){ready()}else{var t0=Date.now(),DUR=1700,fired=false;setTimeout(function(){if(!fired){fired=true;ready()}},3200);(function tick(){var p=clamp((Date.now()-t0)/DUR,0,1),e=1-Math.pow(1-p,3);ldn.textContent=Math.round(e*100);
-  steps.forEach(function(s,i){if(e>=(i+1)/steps.length-.02)s.classList.add('on')});
-  if(p<1)requestAnimationFrame(tick);else setTimeout(function(){if(!fired){fired=true;ready()}},260)})()}
+var ld=$('#loader'),fired=false,msgs=['booting','loading modules','running gates','deploying'];
+function ready(){if(fired)return;fired=true;ld.classList.add('done');$$('[data-h]').forEach(function(e){e.classList.add('in')});typeRole()}
+if(RM)ready();else{var t0=Date.now();setTimeout(ready,2600);(function tick(){var p=clamp((Date.now()-t0)/1100,0,1);$('#ldb').style.width=(p*100)+'%';$('#ldn').textContent=Math.round(p*100)+'%';$('#ldt').textContent=msgs[Math.min(3,Math.floor(p*4))];if(p<1)requestAnimationFrame(tick);else setTimeout(ready,180)})()}
+
+/* role typer */
+var roles=['DevOps Engineer','Azure DevOps · AWS EKS · Terraform','CI/CD with security gates','GitOps with Argo CD'],ri=0,ci=0,del=false,roleEl=$('#role'),typing=false;
+function typeRole(){if(RM){roleEl.textContent=roles[0];return}if(typing)return;typing=true;(function t(){var w=roles[ri];roleEl.textContent=w.slice(0,ci);
+  if(!del&&ci<w.length){ci++;setTimeout(t,55)}else if(!del){del=true;setTimeout(t,1700)}else if(ci>0){ci--;setTimeout(t,22)}else{del=false;ri=(ri+1)%roles.length;setTimeout(t,300)}})()}
 
 /* cursor */
-var cur=$('#cur'), cl=cur.firstChild, mx=-100,my=-100,cx=-100,cy=-100;
+var cur=$('#cur'),mx=-100,my=-100,cx=-100,cy=-100;
 if(FINE&&!RM){d.body.classList.add('cur');
-  addEventListener('mousemove',function(e){mx=e.clientX;my=e.clientY});
-  (function loop(){cx+=(mx-cx)*.22;cy+=(my-cy)*.22;cur.style.transform='translate3d('+cx+'px,'+cy+'px,0)';requestAnimationFrame(loop)})();
-  d.addEventListener('mouseover',function(e){var l=e.target.closest('[data-cur]'),a=e.target.closest('a,button,.rowx,.cert');
-    cur.className=l?'label':(a?'link':'');if(l)cl.textContent=l.getAttribute('data-cur')});
-}
+  (function loop(){cx+=(mx-cx)*.2;cy+=(my-cy)*.2;cur.style.transform='translate3d('+cx+'px,'+cy+'px,0)';requestAnimationFrame(loop)})();
+  d.addEventListener('mouseover',function(e){cur.className=e.target.closest('a,button,.card,.face')?'link':''})}
 
-/* hero dot field */
-var cv=$('#dots'),g=cv.getContext('2d'),W,H,DPR=Math.min(devicePixelRatio||1,2),pts=[],hm={x:-9999,y:-9999},heroOn=true,GAP=30;
-function size(){var r=cv.getBoundingClientRect();W=cv.width=r.width*DPR;H=cv.height=r.height*DPR;pts=[];
-  for(var y=GAP/2;y<r.height;y+=GAP)for(var x=GAP/2;x<r.width;x+=GAP)pts.push({x:x,y:y,ox:0,oy:0})}
-function draw(t){if(heroOn){g.clearRect(0,0,W,H);
-  for(var i=0;i<pts.length;i++){var p=pts[i],dx=p.x-hm.x,dy=p.y-hm.y,dist=Math.sqrt(dx*dx+dy*dy),f=Math.max(0,1-dist/170);
-    var wave=Math.sin(p.x*.012+p.y*.016+t*.0011)*.5+.5;
-    var tx=f?dx/dist*f*18:0,ty=f?dy/dist*f*18:0;p.ox+=(tx-p.ox)*.12;p.oy+=(ty-p.oy)*.12;
-    var a=.07+wave*.11+f*.8,r=(.9+wave*.5+f*1.9)*DPR;
-    g.fillStyle=f>.02?'rgba(200,255,77,'+a+')':'rgba(236,232,223,'+a+')';
-    g.beginPath();g.arc((p.x+p.ox)*DPR,(p.y+p.oy)*DPR,r,0,6.3);g.fill()}}
-  if(!RM)requestAnimationFrame(draw)}
-size();draw(0);addEventListener('resize',function(){size();layout()});
-$('#hero').addEventListener('mousemove',function(e){var r=cv.getBoundingClientRect();hm.x=e.clientX-r.left;hm.y=e.clientY-r.top});
-$('#hero').addEventListener('mouseleave',function(){hm.x=hm.y=-9999});
-new IntersectionObserver(function(es){heroOn=es[0].isIntersecting}).observe($('#hero'));
+/* starfield with depth + parallax */
+var cv=$('#space'),g=cv.getContext('2d'),W,H,DPR=Math.min(devicePixelRatio||1,2),stars=[],px=0,py=0,tx=0,ty=0;
+function size(){W=cv.width=innerWidth*DPR;H=cv.height=innerHeight*DPR;stars=[];var n=Math.min(170,Math.floor(innerWidth*innerHeight/9000));
+  for(var i=0;i<n;i++)stars.push({x:Math.random()*W,y:Math.random()*H,z:Math.random()*.9+.1,c:Math.random()<.7?'233,237,246':(Math.random()<.5?'94,242,255':'143,123,255'),tw:Math.random()*6.3})}
+function sky(t){px+=(tx-px)*.05;py+=(ty-py)*.05;g.clearRect(0,0,W,H);
+  for(var i=0;i<stars.length;i++){var s=stars[i];s.y-=s.z*.12*DPR;if(s.y<-4)s.y=H+4;
+    var x=s.x+px*s.z*40*DPR,y=s.y+py*s.z*40*DPR,a=(.25+.55*s.z)*(.6+.4*Math.sin(t*.0015+s.tw));
+    g.fillStyle='rgba('+s.c+','+a+')';g.beginPath();g.arc(x,y,s.z*1.5*DPR,0,6.3);g.fill()}
+  if(!RM)requestAnimationFrame(sky)}
+size();sky(0);
+addEventListener('mousemove',function(e){mx=e.clientX;my=e.clientY;tx=e.clientX/innerWidth-.5;ty=e.clientY/innerHeight-.5});
 
-/* statement: split into words */
-var st=$('#state'),html='';
-[].forEach.call(st.childNodes,function(n){var k=n.nodeName==='K';n.textContent.split(/(\s+)/).forEach(function(w){if(!w.trim()){html+=w}else{html+='<span class="w'+(k?' k':'')+'">'+w+'</span>'}})});
-st.innerHTML=html;var words=$$('#state .w');
+/* orbiting tool chips around the portrait */
+var core=$('#core'),orb=[
+  {a:255,b:84,r:-18,s:.00042,items:['Kubernetes','Terraform','Azure','AWS']},
+  {a:222,b:128,r:26,s:-.0003,items:['Argo CD','Docker','Vault','Grafana']}],chips=[];
+orb.forEach(function(o,k){o.items.forEach(function(n,i){var c=d.createElement('div');c.className='chip'+(k?' v':'');c.innerHTML='<i></i>'+n;core.appendChild(c);chips.push({el:c,o:o,ph:i/o.items.length*6.283})})});
+function orbit(t){var sc=core.offsetWidth/540;
+  for(var i=0;i<chips.length;i++){var c=chips[i],o=c.o,th=c.ph+t*o.s,x=o.a*Math.cos(th),y=o.b*Math.sin(th),rr=o.r*.01745,X=x*Math.cos(rr)-y*Math.sin(rr),Y=x*Math.sin(rr)+y*Math.cos(rr),dp=Math.sin(th);
+    c.el.style.transform='translate(-50%,-50%) translate('+(X*sc)+'px,'+(Y*sc)+'px) scale('+(.9+.12*dp)+')';c.el.style.zIndex=dp>0?5:2;c.el.style.opacity=.45+.55*(dp+1)/2}
+  if(!RM)requestAnimationFrame(orbit)}
+orbit(RM?900:0);
 
-/* reveal + counters */
-var pend=$$('.fx,.rv').filter(function(el){return el.id!=='hp'&&el.id!=='hc'});
-function count(c){if(c.done)return;c.done=1;var n=+c.getAttribute('data-count'),s=Date.now();
-  (function step(){var p=Math.min((Date.now()-s)/1500,1);c.textContent=Math.round(n*(1-Math.pow(1-p,4)));if(p<1)requestAnimationFrame(step);else c.textContent=n})()}
-function reveal(vh){for(var i=pend.length-1;i>=0;i--){var el=pend[i],r=el.getBoundingClientRect();
-  if(r.top<vh*.92){el.classList.add('in');[].forEach.call(el.querySelectorAll('[data-count]'),count);pend.splice(i,1)}}}
-setInterval(function(){if(pend.length)reveal(innerHeight)},500);
+/* pipeline */
+var S=[['commit','git · gitleaks','0 leaks found'],['build','docker · maven','image built · sha256:4f2a…e91c'],['scan','sonar · fortify · trivy','quality gate passed · 0 critical'],['test','azure devops','deployed to test · checks green'],['uat','approval gate','approved by release manager'],['prod','argo cd · eks','synced · healthy']];
+var rail=$('#rail'),fill=$('#fill'),plog=$('#plog'),pst=$('#pst'),ptxt=$('#ptxt'),prun=false;
+S.forEach(function(s,i){var e=d.createElement('div');e.className='stg';e.innerHTML='<div class="n"><span>0'+(i+1)+'</span></div><h4>'+s[0]+'</h4><p>'+s[1]+'</p>';rail.appendChild(e)});
+var stg=$$('.stg');
+function runPipe(){stg.forEach(function(e){e.className='stg'});fill.style.width='0';pst.classList.remove('ok');ptxt.textContent='running';plog.textContent='';var i=0;
+  (function next(){if(i>0){stg[i-1].className='stg done';fill.style.width=(83.34*(i-1)/5)+'%';plog.innerHTML='<b>✔</b> '+S[i-1][0]+' — '+S[i-1][2]}
+    if(i>=stg.length){pst.classList.add('ok');ptxt.textContent='all checks passed';setTimeout(runPipe,4200);return}
+    stg[i].className='stg run';i++;setTimeout(next,950)})()}
 
-/* pinned horizontal process */
-var proc=$('#proc'),track=$('#track'),stg=$$('.stage'),dist=0,pbar=$('#pbar'),pst=$('#pst'),pstage=$('#pstage'),ppct=$('#ppct');
-function layout(){if(innerWidth<=900){proc.style.height='';dist=0;return}dist=track.scrollWidth-innerWidth+parseFloat(getComputedStyle(track).paddingLeft);proc.style.height=(innerHeight+dist)+'px'}
-layout();addEventListener('load',function(){layout();onScroll()});
+/* terminal */
+var term=$('#term'),tdone=false,script=[['c','whoami'],['o','<span class="s">abdelrahman</span> <span class="w">— devops engineer</span>'],['c','cat stack.yaml'],['o','<span class="k">cloud</span>:    [azure, aws]\n<span class="k">ci_cd</span>:    [azure-devops, gh-actions]\n<span class="k">iac</span>:      [terraform, ansible, helm]\n<span class="k">security</span>: [fortify, sonarqube, trivy]'],['c','kubectl rollout status deploy/career'],['o','<span class="p">✔ successfully rolled out</span>']];
+function runTerm(){if(tdone)return;tdone=true;if(RM){term.innerHTML=script.map(function(s){return s[0]==='c'?'<span class="p">❯</span> <span class="w">'+s[1]+'</span>':s[1]}).join('\n');return}
+  var si=0;(function nx(){if(si>=script.length){term.insertAdjacentHTML('beforeend','<span class="p">❯</span> <span class="caret"></span>');return}var s=script[si++];
+    if(s[0]==='o'){term.insertAdjacentHTML('beforeend',s[1]+'\n');setTimeout(nx,320);return}
+    term.insertAdjacentHTML('beforeend','<span class="p">❯</span> ');var l=d.createElement('span');l.className='w';term.appendChild(l);var i=0;
+    (function ty(){l.textContent=s[1].slice(0,++i);if(i<s[1].length)setTimeout(ty,34);else{term.appendChild(d.createTextNode('\n'));setTimeout(nx,220)}})()})()}
 
-/* scroll-driven */
-var secs=[['hero','intro'],['profile','profile'],['proc','process'],['skills','capabilities'],['work','work'],['certs','credentials'],['career','experience'],['contact','contact']];
-var pimg=$('#pimg'),sbpct=$('#sbpct'),sbsec=$('#sbsec'),ticking=false;
-function onScroll(){ticking=false;var y=scrollY,vh=innerHeight,max=d.documentElement.scrollHeight-vh;
-  sbpct.textContent=pad3(max>0?y/max*100:0);reveal(vh);
-  if(y<vh)pimg.style.transform='translate3d(0,'+(-y*.09)+'px,0)';
-  var sr=st.getBoundingClientRect(),sp=clamp((vh*.85-sr.top)/(sr.height+vh*.35),0,1),lit=Math.floor(sp*words.length*1.15);
-  for(var i=0;i<words.length;i++)words[i].classList.toggle('on',i<lit);
-  if(dist>0){var r=proc.getBoundingClientRect(),p=clamp(-r.top/dist,0,1);track.style.transform='translate3d('+(-p*dist)+'px,0,0)';
-    pbar.style.transform='scaleX('+p+')';ppct.textContent=pad3(p*100)+'%';var idx=Math.min(5,Math.floor(p*6.4));
-    pstage.textContent=p>=.97?'exit 0':'stage 0'+(idx+1)+' / 06';pst.textContent=p>=.97?'all checks passed':'running';pst.classList.toggle('ok',p>=.97);
-    for(var j=0;j<stg.length;j++)stg[j].classList.toggle('on',r.top<=0&&(j<=idx||p>=.97))}
-  else{for(var k=0;k<stg.length;k++){var b=stg[k].getBoundingClientRect();stg[k].classList.toggle('on',b.top<vh*.7)}}
+/* experience tabs */
+var X=[['Jun 2026 → now','Application Engineer','LENSEC · Remote',['Set up an on-prem Azure DevOps Server for 30 users and migrated the existing project collections','Built the CI/CD pipeline that deploys to Test, UAT and Production','Added Fortify and SonarQube scans so security issues are caught before release','Deploy and troubleshoot microservices-based application engines across Linux environments']],
+ ['Nov 2025 → Jun 2026','Cloud Engineer','LEVANTAR · Hyde Park, Egypt',['Ran Azure, Microsoft 365 and hybrid cloud infrastructure','Set up and enforced Entra ID identity and access policies','Shipped web apps to App Service and VMs with GitHub Actions','Monitored infrastructure, apps and logs with Azure Monitor and Log Analytics']],
+ ['Sep 2025 → Feb 2026','DevOps Engineer Intern','National Telecommunication Institute · Smart Village',['Linux administration on RHEL and Ubuntu, with automation in Bash, Python and Ansible','Containerised workloads with Docker, Kubernetes and Helm','Applied SAST/DAST scanning with Fortify and SonarQube']],
+ ['Aug 2024 → Apr 2025','DevOps Engineer Intern','Digital Egypt Pioneers Initiative · Remote',['Provisioned cloud infrastructure with Terraform and Ansible','Deployed Prometheus and Grafana monitoring','Supported deployment and scaling of containerised applications']]];
+var tabs=$('#tabs'),pane=$('#pane');
+function show(k){$$('.tab').forEach(function(t,i){t.classList.toggle('on',i===k)});var x=X[k];
+  pane.innerHTML='<h3>'+x[1]+'</h3><div class="co mono">'+x[2]+'</div><ul>'+x[3].map(function(l,i){return '<li style="animation-delay:'+(i*.07)+'s">'+l+'</li>'}).join('')+'</ul>'}
+X.forEach(function(x,i){var b=d.createElement('button');b.className='tab mono';b.innerHTML=(i===0?'<span class="now">● </span>':'')+x[0]+'<b>'+x[1]+'</b>';b.addEventListener('click',function(){show(i)});tabs.appendChild(b)});show(0);
+
+/* reveal + counters, scroll-position based */
+var pend=$$('.fx').filter(function(e){return !e.hasAttribute('data-h')});
+function count(c){if(c.done)return;c.done=1;var n=+c.getAttribute('data-count'),s=Date.now();(function st(){var p=Math.min((Date.now()-s)/1400,1);c.textContent=Math.round(n*(1-Math.pow(1-p,4)));if(p<1)requestAnimationFrame(st);else c.textContent=n})()}
+function reveal(vh){for(var i=pend.length-1;i>=0;i--){var el=pend[i];if(el.getBoundingClientRect().top<vh*.93){el.classList.add('in');[].forEach.call(el.querySelectorAll('[data-count]'),count);if(el.hasAttribute('data-count'))count(el);
+  if(el.id==='pipe'&&!prun){prun=true;setTimeout(runPipe,500)}if(el.contains(term))setTimeout(runTerm,500);pend.splice(i,1)}}}
+var secs=[['hero','intro'],['system','system'],['ship','pipeline'],['work','work'],['career','experience'],['contact','contact']],sbpct=$('#sbpct'),sbsec=$('#sbsec'),prog=$('#prog'),tick=false;
+function onScroll(){tick=false;var vh=innerHeight,max=d.documentElement.scrollHeight-vh,p=max>0?scrollY/max:0;sbpct.textContent=pad3(p*100);prog.style.width=(p*100)+'%';reveal(vh);
   for(var s=secs.length-1;s>=0;s--){var el=d.getElementById(secs[s][0]);if(el&&el.getBoundingClientRect().top<vh*.5){sbsec.textContent='§ '+secs[s][1];break}}}
-addEventListener('scroll',function(){if(!ticking){ticking=true;requestAnimationFrame(onScroll)}},{passive:true});onScroll();
+addEventListener('scroll',function(){if(!tick){tick=true;requestAnimationFrame(onScroll)}},{passive:true});
+addEventListener('resize',function(){size();onScroll()});addEventListener('load',onScroll);onScroll();setInterval(function(){if(pend.length)reveal(innerHeight)},500);
 
-/* cert spotlight */
-$$('.cert').forEach(function(c){c.addEventListener('mousemove',function(e){var r=c.getBoundingClientRect();c.style.setProperty('--x',(e.clientX-r.left)+'px');c.style.setProperty('--y',(e.clientY-r.top)+'px')})});
+/* card spotlight */
+$$('.card').forEach(function(c){c.addEventListener('mousemove',function(e){var r=c.getBoundingClientRect();c.style.setProperty('--x',(e.clientX-r.left)+'px');c.style.setProperty('--y',(e.clientY-r.top)+'px')})});
 
-/* magnetic button */
-var rd=$('#round');
-if(FINE&&!RM){rd.addEventListener('mousemove',function(e){var r=rd.getBoundingClientRect();rd.style.transform='translate('+((e.clientX-r.left-r.width/2)*.35)+'px,'+((e.clientY-r.top-r.height/2)*.35)+'px)'});
-  rd.addEventListener('mouseleave',function(){rd.style.transform=''})}
-
-/* cairo clock */
-var sbt=$('#sbtime');function clock(){try{sbt.textContent=new Date().toLocaleTimeString('en-GB',{timeZone:'Africa/Cairo'})}catch(e){sbt.textContent=new Date().toTimeString().slice(0,8)}}
-clock();setInterval(clock,1000);
+/* clock */
+var sbt=$('#sbtime');function clock(){try{sbt.textContent=new Date().toLocaleTimeString('en-GB',{timeZone:'Africa/Cairo'})}catch(e){sbt.textContent=new Date().toTimeString().slice(0,8)}}clock();setInterval(clock,1000);
 
 /* copy */
 var toast=$('#toast');function say(m){toast.textContent=m;toast.classList.add('show');setTimeout(function(){toast.classList.remove('show')},1800)}
@@ -575,8 +507,7 @@ function copyMail(){var m='abdelrahman.hamouda29@gmail.com';(navigator.clipboard
 $('#copy').addEventListener('click',copyMail);
 
 /* command palette */
-var cmds=[['Profile','#profile'],['Process','#proc'],['Capabilities','#skills'],['Selected work','#work'],['Credentials','#certs'],['Experience','#career'],['Contact','#contact'],
-  ['Open GitHub','https://github.com/3bdo7amouda'],['Open LinkedIn','https://linkedin.com/in/3bdo7amouda'],['Copy email','copy']];
+var cmds=[['System overview','#system'],['Pipeline','#ship'],['Selected work','#work'],['Experience','#career'],['Contact','#contact'],['Open GitHub','https://github.com/3bdo7amouda'],['Open LinkedIn','https://linkedin.com/in/3bdo7amouda'],['Copy email','copy']];
 var pal=$('#pal'),pin=$('#palIn'),pl=$('#palList'),act=0,view=cmds;
 function render(){pl.innerHTML=view.map(function(c,i){return '<li class="'+(i===act?'act':'')+'" data-i="'+i+'"><span>'+c[0]+'</span><span>'+(c[1].charAt(0)==='#'?'jump':c[1]==='copy'?'run':'open ↗')+'</span></li>'}).join('')}
 function openPal(){pal.classList.add('open');pin.value='';view=cmds;act=0;render();setTimeout(function(){pin.focus()},20)}
@@ -585,13 +516,8 @@ function exec(c){closePal();if(!c)return;if(c[1]==='copy')copyMail();else if(c[1
 $('#palBtn').addEventListener('click',openPal);
 pal.addEventListener('click',function(e){if(e.target===pal)closePal();var li=e.target.closest('li');if(li)exec(view[+li.getAttribute('data-i')])});
 pin.addEventListener('input',function(){var q=pin.value.toLowerCase();view=cmds.filter(function(c){return c[0].toLowerCase().indexOf(q)>-1});act=0;render()});
-addEventListener('keydown',function(e){
-  if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='k'){e.preventDefault();pal.classList.contains('open')?closePal():openPal();return}
-  if(!pal.classList.contains('open'))return;
-  if(e.key==='Escape')closePal();
-  else if(e.key==='ArrowDown'){e.preventDefault();act=Math.min(act+1,view.length-1);render()}
-  else if(e.key==='ArrowUp'){e.preventDefault();act=Math.max(act-1,0);render()}
-  else if(e.key==='Enter')exec(view[act])});
+addEventListener('keydown',function(e){if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='k'){e.preventDefault();pal.classList.contains('open')?closePal():openPal();return}
+  if(!pal.classList.contains('open'))return;if(e.key==='Escape')closePal();else if(e.key==='ArrowDown'){e.preventDefault();act=Math.min(act+1,view.length-1);render()}else if(e.key==='ArrowUp'){e.preventDefault();act=Math.max(act-1,0);render()}else if(e.key==='Enter')exec(view[act])});
 if(/Mac/.test(navigator.platform))$('#palBtn').textContent='⌘K';
 })();
 </script>
