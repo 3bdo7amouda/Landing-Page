@@ -209,7 +209,7 @@ params:
           Deployed a scalable Kubernetes microservices environment with Nginx Ingress and Valkey.
           Automated CI/CD pipelines with GitHub Actions, ArgoCD, and Terraform Cloud.
           Enabled observability and monitoring with Grafana, Prometheus, and custom dashboards.
-          Applied security, storage, and readiness with Cert-Manager, Lets Encrypt, and MinIO S3.
+          Applied security, storage, and readiness with Cert-Manager, Let's Encrypt, and MinIO S3.
         image: /images/hivebox-devops-end-to-end-project.png
         featured:
           name: View Project
